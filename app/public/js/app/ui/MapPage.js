@@ -10,6 +10,7 @@ define([
     "../../ui/_include/widget/NavigationWidget",
     "../../ui/_include/widget/GridWidget",
     "../../ui/data/display/Renderer",
+    "../../ui/data/input/widget/SelectBox",
     "../../model/meta/Model",
     "../../persistence/Store",
     "../../persistence/HistoryStore",
@@ -31,6 +32,7 @@ define([
     NavigationWidget,
     GridWidget,
     Renderer,
+    Select,
     Model,
     Store,
     HistoryStore,
@@ -44,6 +46,10 @@ define([
         templateString: lang.replace(template, Dict.tplTranslate),
         contextRequire: require,
         title: Dict.translate('Home'),
+
+        map: null,
+        markers: [],
+        category: null,
 
         constructor: function(params) {
             // register search result type if not done already
@@ -76,36 +82,32 @@ define([
 
         buildForm: function() {
             // create map
-            var map = L.map('map').setZoom(13);
+            this.map = L.map('map').setZoom(13);
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
                 id: 'mapbox.streets',
                 accessToken: config.app.mapAccessToken
-            }).addTo(map);
-            var geocoder = new L.Control.Geocoder.Nominatim();
+            }).addTo(this.map);
+
+            // category filter
+            var inputType = 'select:{"list":{"type":"node","types":["Category"]}}';
+            var categoryFilter = new Select({
+                name: 'category',
+                inputType: inputType
+            }, this.categoryControl);
+            categoryFilter.startup();
+            categoryFilter.on('change', lang.hitch(this, function() {
+                var item = categoryFilter.get('item');
+                this.loadMarkers(item.value);
+            }));
 
             // set location markers
-            var markers = [];
-            var type = 'Location';
-            var route = this.router.getRoute('entity');
-            var store = Store.getStore(type, config.app.defaultLanguage);
-            store.setExtraParam('values', 'address');
-            var filter = {};
-            filter[type+'.category'] = 1;
-            store.filter(filter).forEach(lang.hitch(this, function(location) {
-                var address = location.address;
-                var id = Model.getIdFromOid(location.oid);
-                var pathParams = { type:type, id:id };
-                var url = route.assemble(pathParams);
-                geocoder.geocode(address, function(results) {
-                    var latLng = new L.LatLng(results[0].center.lat, results[0].center.lng);
-                    var marker = new L.Marker(latLng);
-                    marker.bindPopup(address.replace(/\n/g, "<br>")+'<br><a href="'+url+'">Edit</a>');
-                    marker.addTo(map);
-                    markers.push(marker);
-                    var group = new L.featureGroup(markers);
-                    map.fitBounds(group.getBounds().pad(0.5));
-                });
-            }));
+            Store.getStore('Category', config.app.defaultLanguage).fetch().then(lang.hitch(this, function(items) {
+                if (items.length > 0) {
+                    var id = Model.getIdFromOid(items[0].oid);
+                    this.loadMarkers(id);
+                    categoryFilter.set('value', id);
+                }
+            }))
 
             // latest changes
             var renderOptions = { truncate: 50 };
@@ -150,6 +152,42 @@ define([
                 actions: this.getGridActions(),
                 enabledFeatures: []
             }, this.gridNode);
+        },
+
+        loadMarkers: function(category) {
+            category = parseInt(category);
+            if (category !== this.category) {
+                // clear map
+                for (var i=0, count=this.markers.length; i<count; i++) {
+                    this.map.removeLayer(this.markers[i]);
+                }
+
+                // load markers
+                this.category = category;
+                var geocoder = new L.Control.Geocoder.Nominatim();
+                this.markers = [];
+                var type = 'Location';
+                var route = this.router.getRoute('entity');
+                var store = Store.getStore(type, config.app.defaultLanguage);
+                store.setExtraParam('values', 'address');
+                var filter = {};
+                filter[type+'.category'] = category;
+                store.filter(filter).forEach(lang.hitch(this, function(location) {
+                    var address = location.address;
+                    var id = Model.getIdFromOid(location.oid);
+                    var pathParams = { type:type, id:id };
+                    var url = route.assemble(pathParams);
+                    geocoder.geocode(address, lang.hitch(this, function(results) {
+                        var latLng = new L.LatLng(results[0].center.lat, results[0].center.lng);
+                        var marker = new L.Marker(latLng);
+                        marker.bindPopup(address.replace(/\n/g, "<br>")+'<br><a href="'+url+'">Edit</a>');
+                        marker.addTo(this.map);
+                        this.markers.push(marker);
+                        var group = new L.featureGroup(this.markers);
+                        this.map.fitBounds(group.getBounds().pad(0.5));
+                    }));
+                }));
+            }
         },
 
         getGridActions: function() {

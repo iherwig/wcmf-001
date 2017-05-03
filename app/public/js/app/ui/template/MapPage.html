@@ -7,12 +7,17 @@
     <div class="jumbotron">
       <h1 id="title">{translate:Welcome}</h1>
 
-      <p>
-        <a href="#" data-dojo-attach-event="onClick:_navigateContent">{translate:Manage Content} &raquo;</a>
-        <a href="#" data-dojo-attach-event="onClick:_navigateMedia">{translate:Media Pool} &raquo;</a>
-      </p>
+      <div class="btn-toolbar">
+        <div class="pull-left"><p>
+          <a href="#" data-dojo-attach-event="onClick:_navigateContent">{translate:Manage Content} &raquo;</a>
+          <a href="#" data-dojo-attach-event="onClick:_navigateMedia">{translate:Media Pool} &raquo;</a>
+        </p></div>
+        <div class="pull-right">
+          <div data-dojo-attach-point="categoryControl"></div>
+        </div>
+      </div>
 
-      <div id="map" style="height: 480px;"></div><br>
+      <div id="map" style="height: 480px;"></div><hr>
 
       <p>{translate:Last Updates}</p>
       <div data-dojo-attach-point="toolbarNode"></div>
