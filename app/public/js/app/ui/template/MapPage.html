@@ -1,0 +1,25 @@
+<div class="home-page">
+
+  <div data-dojo-type="../../ui/_include/widget/NavigationWidget" data-dojo-props="selected:'navHome'" data-dojo-attach-point="navigation"></div>
+
+  <!-- Begin page content -->
+  <div class="container">
+    <div class="jumbotron">
+      <h1 id="title">{translate:Welcome}</h1>
+
+      <p>
+        <a href="#" data-dojo-attach-event="onClick:_navigateContent">{translate:Manage Content} &raquo;</a>
+        <a href="#" data-dojo-attach-event="onClick:_navigateMedia">{translate:Media Pool} &raquo;</a>
+      </p>
+
+      <div id="map" style="height: 480px;"></div><br>
+
+      <p>{translate:Last Updates}</p>
+      <div data-dojo-attach-point="toolbarNode"></div>
+      <div data-dojo-attach-point="gridNode"></div>
+
+    </div>
+  </div>
+  <!-- End page content -->
+
+</div>

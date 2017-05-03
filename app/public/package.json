@@ -1,0 +1,5 @@
+{
+    "name": "wcmf-001",
+    "description": "A wCMF application for managing locations",
+    "dojoBuild": "package.js"
+}
