@@ -20,7 +20,7 @@ define([
         typeName: "app.src.model.wcmf.User",
         description: "",
         isSortable: false,
-        displayValues: ["login", "active", "super_user"],
+        displayValues: ["login"],
         pkNames: ["id"],
         relationOrder: [],
 

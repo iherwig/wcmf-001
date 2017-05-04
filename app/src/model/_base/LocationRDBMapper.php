@@ -49,11 +49,11 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
     $displayName = $name;
     if (false) {}
       elseif ($name == 'id') { $displayName = $message->getText("id"); }
-      elseif ($name == 'name') { $displayName = $message->getText("name"); }
       elseif ($name == 'category') { $displayName = $message->getText("category"); }
+      elseif ($name == 'name') { $displayName = $message->getText("name"); }
+      elseif ($name == 'user') { $displayName = $message->getText("user"); }
       elseif ($name == 'address') { $displayName = $message->getText("address"); }
       elseif ($name == 'notes') { $displayName = $message->getText("notes"); }
-      elseif ($name == 'user') { $displayName = $message->getText("user"); }
       elseif ($name == 'created') { $displayName = $message->getText("created"); }
       elseif ($name == 'creator') { $displayName = $message->getText("creator"); }
       elseif ($name == 'modified') { $displayName = $message->getText("modified"); }
@@ -68,11 +68,11 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
     $description = $name;
     if (false) {}
       elseif ($name == 'id') { $description = $message->getText(""); }
-      elseif ($name == 'name') { $description = $message->getText(""); }
       elseif ($name == 'category') { $description = $message->getText(""); }
+      elseif ($name == 'name') { $description = $message->getText(""); }
+      elseif ($name == 'user') { $description = $message->getText(""); }
       elseif ($name == 'address') { $description = $message->getText(""); }
       elseif ($name == 'notes') { $description = $message->getText(""); }
-      elseif ($name == 'user') { $description = $message->getText(""); }
       elseif ($name == 'created') { $description = $message->getText(""); }
       elseif ($name == 'creator') { $description = $message->getText(""); }
       elseif ($name == 'modified') { $description = $message->getText(""); }
@@ -94,6 +94,7 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
     return [
       'isSearchable' => true,
       'displayValues' => ['name', 'category', 'user'],
+      'relationOrder' => ['Category', 'Rating', 'Image'],
 // PROTECTED REGION ID(app/src/model/_base/LocationRDBMapper.php/Properties) ENABLED START
 // PROTECTED REGION END
     ];
@@ -104,9 +105,7 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
    */
   public function getOwnDefaultOrder($roleName=null) {
     $orderDefs = [];
-    if ($roleName == null) {
-      $orderDefs[] = ['sortFieldName' => 'sortkey', 'sortDirection' => 'ASC', 'isSortkey' => true];
-    }
+    $orderDefs[] = ['sortFieldName' => 'name', 'sortDirection' => 'ASC', 'isSortkey' => false];
     return $orderDefs;
   }
 
@@ -123,6 +122,10 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
         'app.src.model.Location', 'Location', 'app.src.model.Image', 'Image',
         '1', '1', '0', 'unbounded', 'none', 'composite', 'true', 'true', 'child', 'id', 'fk_location_id'
       ),
+      'Category' => new RDBManyToOneRelationDescription(
+        'app.src.model.Location', 'Location', 'app.src.model.Category', 'Category',
+        '0', 'unbounded', '1', '1', 'composite', 'none', 'true', 'true', 'parent', 'id', 'category'
+      ),
     ];
   }
 
@@ -138,11 +141,15 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
+      'category' => new RDBAttributeDescription('category', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Location', 'category'),
+     /**
+      *
+      */
       'name' => new RDBAttributeDescription('name', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'text', 'text', 'Location', 'name'),
      /**
       *
       */
-      'category' => new RDBAttributeDescription('category', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"node","types":["Category"]}}', 'text', 'Location', 'category'),
+      'user' => new RDBAttributeDescription('user', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"node","types":["User"]}}', 'text', 'Location', 'user'),
      /**
       *
       */
@@ -151,10 +158,6 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       *
       */
       'notes' => new RDBAttributeDescription('notes', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'ckeditor:{"toolbarSet":"wcmf"}', 'text', 'Location', 'notes'),
-     /**
-      *
-      */
-      'user' => new RDBAttributeDescription('user', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"node","types":["User"]}}', 'text', 'Location', 'user'),
      /**
       *
       */
@@ -171,10 +174,6 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       *
       */
       'last_editor' => new RDBAttributeDescription('last_editor', 'String', ['DATATYPE_ATTRIBUTE', 'GROUP_INTERNAL'], null, '', '', false, 'text', 'text', 'Location', 'last_editor'),
-      /**
-       * Sort key for ordering
-       */
-      'sortkey' => new RDBAttributeDescription('sortkey', 'Float', ['DATATYPE_IGNORE'], null, 'regexp:{"pattern":"/^[0-9.]*$/"}', '', true, 'text[class="tiny"]', 'text', 'Location', 'sortkey'),
     ];
   }
 
@@ -196,6 +195,8 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
 /**
  * Additional names to be included by l10n tools ([Pl.]: plural forms)
  * - $message->getText("Location [Pl.]")
+ * - $message->getText("Category")
+ * - $message->getText("Category [Pl.]")
  * - $message->getText("Rating")
  * - $message->getText("Rating [Pl.]")
  * - $message->getText("Image")

@@ -23,4 +23,23 @@ abstract class CategoryBase extends EntityBase {
     }
     parent::__construct($oid, $initialData);
   }
+
+  /**
+   * Get the Location instances in the Location relation
+   * @return Array of Location instances
+   */
+  public function getLocationList() {
+    return $this->getValue('Location');
+  }
+
+  /**
+   * Set the Location instances in the Location relation
+   * @param nodeList Array of Location instances
+   */
+  public function setLocationList(array $nodeList) {
+    $this->setValue('Location', null);
+    foreach ($nodeList as $node) {
+      $this->addNode($node, 'Location');
+    }
+  }
 }

@@ -25,6 +25,25 @@ abstract class LocationBase extends EntityBase {
   }
 
   /**
+   * Get the Category instances in the Category relation
+   * @return Array of Category instances
+   */
+  public function getCategoryList() {
+    return $this->getValue('Category');
+  }
+
+  /**
+   * Set the Category instances in the Category relation
+   * @param nodeList Array of Category instances
+   */
+  public function setCategoryList(array $nodeList) {
+    $this->setValue('Category', null);
+    foreach ($nodeList as $node) {
+      $this->addNode($node, 'Category');
+    }
+  }
+
+  /**
    * Get the Rating instances in the Rating relation
    * @return Array of Rating instances
    */

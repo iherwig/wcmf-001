@@ -13,17 +13,18 @@ use app\src\model\_base\LocationBase;
  * Location
  *
  * @var id
+ * @var category
  * @var name (String)
- * @var category (String)
+ * @var user (String)
  * @var address (String)
  * @var notes (String)
- * @var user (String)
  * @var created (Date)
  * @var creator (String)
  * @var modified (Date)
  * @var last_editor (String)
  * @rel Rating (app.src.model.Rating, 1:n)
  * @rel Image (app.src.model.Image, 1:n)
+ * @rel Category (app.src.model.Category, n:1)
  */
 class Location extends LocationBase {
 // PROTECTED REGION ID(app/src/model/Location.php/Body) ENABLED START

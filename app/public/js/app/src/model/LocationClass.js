@@ -19,13 +19,25 @@ define([
     ], {
         typeName: "app.src.model.Location",
         description: "",
-        isSortable: true,
+        isSortable: false,
         displayValues: ["name", "category", "user"],
         pkNames: ["id"],
-        relationOrder: [],
+        relationOrder: ["Category", "Rating", "Image"],
 
         attributes: [{
             name: "id",
+            type: "",
+            description: "",
+            isEditable: false,
+            inputType: "text",
+            displayType: "text",
+            validateType: "",
+            validateDesc: "",
+            tags: ["DATATYPE_IGNORE"],
+            defaultValue: null,
+            isReference: false
+        }, {
+            name: "category",
             type: "",
             description: "",
             isEditable: false,
@@ -49,11 +61,11 @@ define([
             defaultValue: null,
             isReference: false
         }, {
-            name: "category",
+            name: "user",
             type: "String",
             description: "",
             isEditable: true,
-            inputType: "select:{\"list\":{\"type\":\"node\",\"types\":[\"Category\"]}}",
+            inputType: "select:{\"list\":{\"type\":\"node\",\"types\":[\"User\"]}}",
             displayType: "text",
             validateType: "",
             validateDesc: "",
@@ -78,18 +90,6 @@ define([
             description: "",
             isEditable: true,
             inputType: "ckeditor:{\"toolbarSet\":\"wcmf\"}",
-            displayType: "text",
-            validateType: "",
-            validateDesc: "",
-            tags: ["DATATYPE_ATTRIBUTE"],
-            defaultValue: null,
-            isReference: false
-        }, {
-            name: "user",
-            type: "String",
-            description: "",
-            isEditable: true,
-            inputType: "select:{\"list\":{\"type\":\"node\",\"types\":[\"User\"]}}",
             displayType: "text",
             validateType: "",
             validateDesc: "",
@@ -164,6 +164,15 @@ define([
             thisEndName: "Location",
             isSortable: true,
             relationType: "child"
+        }, {
+            name: "Category",
+            type: "Category",
+            fkName: "category",
+            aggregationKind: "none",
+            maxMultiplicity: "1",
+            thisEndName: "Location",
+            isSortable: false,
+            relationType: "parent"
         }]
 
 // PROTECTED REGION ID(app/public/js/model/types/app/src/model/LocationClass.js/Body) ENABLED START

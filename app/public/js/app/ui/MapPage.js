@@ -169,18 +169,23 @@ define([
                 var type = 'Location';
                 var route = this.router.getRoute('entity');
                 var store = Store.getStore(type, config.app.defaultLanguage);
-                store.setExtraParam('values', 'address');
+                store.setExtraParam('values', 'name,address');
                 var filter = {};
                 filter[type+'.category'] = category;
                 store.filter(filter).forEach(lang.hitch(this, function(location) {
-                    var address = location.address;
                     var id = Model.getIdFromOid(location.oid);
+                    var name = location.name;
+                    var address = location.address;
                     var pathParams = { type:type, id:id };
                     var url = route.assemble(pathParams);
                     geocoder.geocode(address, lang.hitch(this, function(results) {
                         var latLng = new L.LatLng(results[0].center.lat, results[0].center.lng);
                         var marker = new L.Marker(latLng);
-                        marker.bindPopup(address.replace(/\n/g, "<br>")+'<br><a href="'+url+'">Edit</a>');
+                        marker.bindPopup(
+                                '<strong>'+name+'</strong><br>'+
+                                address.replace(/\n/g, '<br>')+
+                                '<br><a href="'+url+'">'+Dict.translate('Edit')+'</a>'
+                        );
                         marker.addTo(this.map);
                         this.markers.push(marker);
                         var group = new L.featureGroup(this.markers);

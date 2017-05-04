@@ -20,7 +20,7 @@ define([
         typeName: "app.src.model.Category",
         description: "",
         isSortable: false,
-        displayValues: ["name", "color"],
+        displayValues: ["name"],
         pkNames: ["id"],
         relationOrder: [],
 
@@ -110,7 +110,16 @@ define([
             isReference: false
         }],
 
-        relations: []
+        relations: [{
+            name: "Location",
+            type: "Location",
+            fkName: "category",
+            aggregationKind: "composite",
+            maxMultiplicity: "unbounded",
+            thisEndName: "Category",
+            isSortable: false,
+            relationType: "child"
+        }]
 
 // PROTECTED REGION ID(app/public/js/model/types/app/src/model/CategoryClass.js/Body) ENABLED START
         , listView: 'app/js/ui/data/widget/EntityListWidget'

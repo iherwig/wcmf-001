@@ -89,7 +89,7 @@ class UserRDBMapper extends NodeUnifiedRDBMapper {
   public function getProperties() {
     return [
       'isSearchable' => false,
-      'displayValues' => ['login', 'active', 'super_user'],
+      'displayValues' => ['login'],
 // PROTECTED REGION ID(app/src/model/wcmf/_base/UserRDBMapper.php/Properties) ENABLED START
 // PROTECTED REGION END
     ];

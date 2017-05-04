@@ -21,10 +21,10 @@ $messages_en['<em>%0%</em> was successfully unlinked'] = '';
 $messages_en['<em>%0%</em> was successfully unlocked'] = '';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js
 $messages_en['<em>%0%</em> was successfully updated'] = '';
-// file(s): src/model/wcmf/_base/PermissionRDBMapper.php
-$messages_en['action'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_en['Action'] = '';
+// file(s): src/model/wcmf/_base/PermissionRDBMapper.php
+$messages_en['action'] = '';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['active'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
@@ -53,11 +53,11 @@ $messages_en['Backend error'] = '';
 $messages_en['Cancel'] = '';
 // file(s): lib/io/FileUtil.php
 $messages_en['Cannot copy %0% (it\'s neither a file nor a directory).'] = '';
-// file(s): src/model/_base/CategoryRDBMapper.php
+// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_en['Category'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_en['category'] = '';
-// file(s): src/model/_base/CategoryRDBMapper.php
+// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_en['Category [Pl.]'] = '';
 // file(s): public/js/action/Link.js
 $messages_en['Choose Objects'] = '';
@@ -87,11 +87,11 @@ $messages_en['Copying <em>%0%</em>'] = '';
 $messages_en['Copying tree: continue with %0%'] = '';
 // file(s): public/js/ui/data/widget/template/EntityListWidget.html
 $messages_en['Create %0%'] = '';
-// file(s): public/js/ui/home/HomePage.js, src/model/wcmf/_base/LockRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/wcmf/_base/LockRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['created'] = '';
 // file(s): public/js/ui/admin/template/AdminPage.html
 $messages_en['Create Search Index'] = '';
-// file(s): public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['creator'] = '';
 // file(s): application/views/plugins/function.daterange.php
 $messages_en['d.'] = '';
@@ -115,6 +115,8 @@ $messages_en['Detail view class for type <em>%0%</em> not found.'] = '';
 $messages_en['Do you really want to delete <em>%0%</em> ?'] = '';
 // file(s): public/js/ui/data/widget/EntityListWidget.js
 $messages_en['Do you really want to import <em>%0%</em> ?'] = '';
+// file(s): public/js/app/ui/MapPage.js
+$messages_en['Edit'] = '';
 // file(s): public/js/ui/data/input/widget/Media.js
 $messages_en['Embed Code'] = '';
 // file(s): public/js/ui/error/ErrorPage.js
@@ -149,7 +151,7 @@ $messages_en['fk_location_id'] = '';
 $messages_en['fk_role_id'] = '';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php
 $messages_en['fk_user_id'] = '';
-// file(s): public/js/ui/home/HomePage.js, public/js/ui/_include/widget/template/NavigationWidget.html
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, public/js/ui/_include/widget/template/NavigationWidget.html
 $messages_en['Home'] = '';
 // file(s): src/model/wcmf/_base/DBSequenceRDBMapper.php, src/model/wcmf/_base/LanguageRDBMapper.php, src/model/wcmf/_base/LockRDBMapper.php, src/model/wcmf/_base/PermissionRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php, src/model/wcmf/_base/TranslationRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['id'] = '';
@@ -177,9 +179,9 @@ $messages_en['Language'] = '';
 $messages_en['language'] = '';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_en['Language [Pl.]'] = 'Languages';
-// file(s): public/js/ui/home/template/HomePage.html
+// file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
 $messages_en['Last Updates'] = '';
-// file(s): public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['last_editor'] = '';
 // file(s): public/js/ui/data/EntityListPage.js
 $messages_en['List view class for type <em>%0%</em> not found.'] = '';
@@ -187,9 +189,9 @@ $messages_en['List view class for type <em>%0%</em> not found.'] = '';
 $messages_en['Loading'] = '';
 // file(s): application/controller/BatchDisplayController.php
 $messages_en['Loading tree: continue with %0%'] = '';
-// file(s): src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Location'] = '';
-// file(s): src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Location [Pl.]'] = '';
 // file(s): src/model/wcmf/_base/LockRDBMapper.php
 $messages_en['Lock'] = '';
@@ -199,19 +201,19 @@ $messages_en['Locking <em>%0%</em>'] = '';
 $messages_en['Lock [Pl.]'] = 'Locks';
 // file(s): application/views/plugins/function.translate.php
 $messages_en['Logged in as %0% since %1%'] = '';
-// file(s): src/model/wcmf/_base/LockRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
-$messages_en['login'] = '';
 // file(s): public/js/ui/login/LoginPage.js
 $messages_en['Login'] = '';
+// file(s): src/model/wcmf/_base/LockRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
+$messages_en['login'] = '';
 // file(s): public/js/ui/login/LogoutPage.js, public/js/ui/_include/widget/template/NavigationWidget.html
 $messages_en['Logout'] = '';
-// file(s): public/js/ui/home/template/HomePage.html
+// file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
 $messages_en['Manage Content'] = '';
 // file(s): public/js/ui/media/BrowsePage.js
 $messages_en['Media'] = '';
-// file(s): public/js/ui/home/template/HomePage.html, public/js/ui/link/template/BrowsePage.html, public/js/ui/media/template/BrowsePage.html, public/js/ui/_include/widget/template/NavigationWidget.html
+// file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html, public/js/ui/link/template/BrowsePage.html, public/js/ui/media/template/BrowsePage.html, public/js/ui/_include/widget/template/NavigationWidget.html
 $messages_en['Media Pool'] = '';
-// file(s): public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['modified'] = '';
 // file(s): application/controller/CopyController.php
 $messages_en['Moving'] = '';
@@ -259,10 +261,10 @@ $messages_en['Only PersistenceMappers of type RDBMapper are supported.'] = '';
 $messages_en['Optimizing index'] = '';
 // file(s): public/js/ui/error/NotFoundPage.js
 $messages_en['Page not found'] = '';
-// file(s): src/model/wcmf/_base/UserRDBMapper.php
-$messages_en['password'] = '';
 // file(s): public/js/ui/login/template/LoginPage.html, public/js/ui/_include/widget/template/LoginDlgWidget.html
 $messages_en['Password'] = '';
+// file(s): src/model/wcmf/_base/UserRDBMapper.php
+$messages_en['password'] = '';
 // file(s): src/model/wcmf/_base/PermissionRDBMapper.php
 $messages_en['Permission'] = '';
 // file(s): public/js/ui/admin/PermissionListPage.js, public/js/ui/admin/PermissionPage.js
@@ -429,10 +431,10 @@ $messages_en['Update'] = '';
 $messages_en['Updated objects'] = '';
 // file(s): application/controller/SaveController.php
 $messages_en['Upload failed for %0%.'] = '';
-// file(s): src/model/_base/LocationRDBMapper.php
-$messages_en['user'] = '';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['User'] = '';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_en['user'] = '';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['UserConfig'] = '';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
@@ -447,14 +449,14 @@ $messages_en['Users'] = '';
 $messages_en['User [Pl.]'] = 'Users';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['value'] = '';
-// file(s): public/js/ui/home/template/HomePage.html
+// file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
 $messages_en['Welcome'] = '';
 // file(s): public/js/ui/_include/widget/template/LoginDlgWidget.html
 $messages_en['Your session is lost. Please sign in.'] = '';
-// file(s): public/js/ui/home/HistoryEntry.js, public/js/ui/home/HomePage.js, public/js/ui/search/SearchResult.js, public/js/ui/search/SearchResultPage.js
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HistoryEntry.js, public/js/ui/home/HomePage.js, public/js/ui/search/SearchResult.js, public/js/ui/search/SearchResultPage.js
 $messages_en['_displayValue'] = 'object';
 // file(s): public/js/ui/home/HistoryEntry.js, public/js/ui/search/SearchResult.js
 $messages_en['_summary'] = 'summary';
-// file(s): public/js/ui/home/HistoryEntry.js, public/js/ui/home/HomePage.js, public/js/ui/search/SearchResult.js, public/js/ui/search/SearchResultPage.js
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HistoryEntry.js, public/js/ui/home/HomePage.js, public/js/ui/search/SearchResult.js, public/js/ui/search/SearchResultPage.js
 $messages_en['_type'] = 'type';
 ?>

@@ -1670,6 +1670,11 @@
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fcwjk6vwEeaQUopA1XIUeQ" value="1"/>
                   <defaultValue xmi:type="uml:LiteralString" xmi:id="_fcwjlKvwEeaQUopA1XIUeQ" value="WCMF 001"/>
                 </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_WaxC8DCoEeezbITIq6j96g" name="color" visibility="public" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WaxC8TCoEeezbITIq6j96g" value="1"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WaxC8jCoEeezbITIq6j96g" value="1"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_WaxC8zCoEeezbITIq6j96g" value="#01B6AD"/>
+                </ownedAttribute>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_fcwjmavwEeaQUopA1XIUeQ" name="rootTypes" visibility="public" type="_agg3ALQwEeOLlbB2YLI0iw">
                   <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fcwjmqvwEeaQUopA1XIUeQ" value="1"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fcwjm6vwEeaQUopA1XIUeQ" value="1"/>
@@ -1704,6 +1709,23 @@
                   <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EvdmQi_hEeeCKtxl1f5_Nw" value="1"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EvdmQy_hEeeCKtxl1f5_Nw" value="1"/>
                   <defaultValue xmi:type="uml:LiteralString" xmi:id="_EvdmRC_hEeeCKtxl1f5_Nw" value="de"/>
+                </ownedAttribute>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_Wf53EDCnEeezbITIq6j96g" name="Rating">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Wf53ETCnEeezbITIq6j96g" name="1" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53EjCnEeezbITIq6j96g" value="★"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Wf53EzCnEeezbITIq6j96g" name="2" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53FDCnEeezbITIq6j96g" value="★★"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_Wf53FTCnEeezbITIq6j96g" name="3" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53FjCnEeezbITIq6j96g" value="★★★"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_kodtMDCnEeezbITIq6j96g" name="4" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_kodtMTCnEeezbITIq6j96g" value="★★★★"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_kqu-EDCnEeezbITIq6j96g" name="5" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_kqvlIDCnEeezbITIq6j96g" value="★★★★★"/>
                 </ownedAttribute>
               </packagedElement>
             </packagedElement>
@@ -2036,10 +2058,9 @@
               <packagedElement xmi:type="uml:Class" xmi:id="_BMnDwLU2EeORdpT3S9OOtw" name="Location">
                 <generalization xmi:type="uml:Generalization" xmi:id="_7JZAQLU5EeORdpT3S9OOtw" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_kq-u8LU4EeORdpT3S9OOtw" name="name" type="_agg3ALQwEeOLlbB2YLI0iw"/>
-                <ownedAttribute xmi:type="uml:Property" xmi:id="_24XQYC_cEeeCKtxl1f5_Nw" name="category" type="_agg3ALQwEeOLlbB2YLI0iw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_SSUrIC_dEeeCKtxl1f5_Nw" name="user" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_k7roYC_cEeeCKtxl1f5_Nw" name="address" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_njBmAPT-EeSdk57oe2HXMQ" name="notes" type="_agg3ALQwEeOLlbB2YLI0iw"/>
-                <ownedAttribute xmi:type="uml:Property" xmi:id="_SSUrIC_dEeeCKtxl1f5_Nw" name="user" type="_agg3ALQwEeOLlbB2YLI0iw"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Class" xmi:id="_BQLVILU2EeORdpT3S9OOtw" name="Image">
                 <generalization xmi:type="uml:Generalization" xmi:id="_iovDALU7EeORdpT3S9OOtw" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>
@@ -2072,6 +2093,19 @@
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lH0JcC_oEeeCKtxl1f5_Nw" value="*"/>
                 </ownedEnd>
                 <ownedEnd xmi:type="uml:Property" xmi:id="_hSrD4i_oEeeCKtxl1f5_Nw" type="_BMnDwLU2EeORdpT3S9OOtw" association="_hSqc0C_oEeeCKtxl1f5_Nw"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_DbVZ8DCnEeezbITIq6j96g" memberEnd="_Dbej4DCnEeezbITIq6j96g _DbfyADCnEeezbITIq6j96g" navigableOwnedEnd="_Dbej4DCnEeezbITIq6j96g _DbfyADCnEeezbITIq6j96g">
+                <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Dbd80DCnEeezbITIq6j96g" source="org.eclipse.papyrus">
+                  <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Dbd80TCnEeezbITIq6j96g" key="nature" value="UML_Nature"/>
+                </eAnnotations>
+                <ownedEnd xmi:type="uml:Property" xmi:id="_DbfyADCnEeezbITIq6j96g" type="_BMnDwLU2EeORdpT3S9OOtw" aggregation="composite" association="_DbVZ8DCnEeezbITIq6j96g">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KAl2sDCnEeezbITIq6j96g"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KAo6ADCnEeezbITIq6j96g" value="*"/>
+                </ownedEnd>
+                <ownedEnd xmi:type="uml:Property" xmi:id="_Dbej4DCnEeezbITIq6j96g" type="_BDrKMLU2EeORdpT3S9OOtw" association="_DbVZ8DCnEeezbITIq6j96g">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Is72cDCnEeezbITIq6j96g" value="1"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ItBWADCnEeezbITIq6j96g" value="1"/>
+                </ownedEnd>
               </packagedElement>
             </packagedElement>
             <packagedElement xmi:type="uml:Package" xmi:id="_B7Q5IPu5EeOmMdys2glKCA" name="controller">
@@ -2141,11 +2175,11 @@
   <Chronos:ChiValue xmi:id="_RRfzoLQ5EeOQ5oJFa1i8cg" app_data_type="DATATYPE_ATTRIBUTE|GROUP_INTERNAL" base_Property="_QGL3ELQ5EeOQ5oJFa1i8cg"/>
   <Chronos:ChiValue xmi:id="_WYoFgLQ5EeOQ5oJFa1i8cg" app_data_type="DATATYPE_ATTRIBUTE|GROUP_INTERNAL" db_data_type="DATETIME" base_Property="_VDL8kLQ5EeOQ5oJFa1i8cg"/>
   <Chronos:ChiValue xmi:id="_bCo9kLQ5EeOQ5oJFa1i8cg" app_data_type="DATATYPE_ATTRIBUTE|GROUP_INTERNAL" base_Property="_Z6PLELQ5EeOQ5oJFa1i8cg"/>
-  <Chronos:ChiNode xmi:id="_VViRkLTNEeOYkOsR5IzpsA" base_Class="_s2Ve4LTMEeOYkOsR5IzpsA" display_value="table|id" pk_name="table"/>
-  <Chronos:ChiNode xmi:id="_dQEfMLTNEeOYkOsR5IzpsA" base_Class="_s73fILTMEeOYkOsR5IzpsA" display_value="objectid|login|created"/>
+  <Chronos:ChiNode xmi:id="_VViRkLTNEeOYkOsR5IzpsA" base_Class="_s2Ve4LTMEeOYkOsR5IzpsA" display_value="table,id" pk_name="table"/>
+  <Chronos:ChiNode xmi:id="_dQEfMLTNEeOYkOsR5IzpsA" base_Class="_s73fILTMEeOYkOsR5IzpsA" display_value="objectid,login,created"/>
   <Chronos:ChiNode xmi:id="_fMz4sLTNEeOYkOsR5IzpsA" base_Class="_s5AYYLTMEeOYkOsR5IzpsA" display_value="name" orderby="name"/>
-  <Chronos:ChiNode xmi:id="_haVgMLTNEeOYkOsR5IzpsA" base_Class="_tCKUYLTMEeOYkOsR5IzpsA" display_value="objectid|attribute|language"/>
-  <Chronos:ChiNode xmi:id="_jedUELTNEeOYkOsR5IzpsA" base_Class="_tJBxYLTMEeOYkOsR5IzpsA" display_value="login,active,super_user" orderby="name"/>
+  <Chronos:ChiNode xmi:id="_haVgMLTNEeOYkOsR5IzpsA" base_Class="_tCKUYLTMEeOYkOsR5IzpsA" display_value="objectid,attribute,language"/>
+  <Chronos:ChiNode xmi:id="_jedUELTNEeOYkOsR5IzpsA" base_Class="_tJBxYLTMEeOYkOsR5IzpsA" display_value="login" orderby="name"/>
   <Chronos:ChiNode xmi:id="_lbY60LTNEeOYkOsR5IzpsA" base_Class="_tFTvALTMEeOYkOsR5IzpsA" display_value="name"/>
   <Chronos:ChiNode xmi:id="_m1UiMLTNEeOYkOsR5IzpsA" base_Class="_s_A5wLTMEeOYkOsR5IzpsA" display_value="name" orderby="name"/>
   <Chronos:ChiManyToMany xmi:id="_oMlQELTNEeOYkOsR5IzpsA" base_Class="_tM8BALTMEeOYkOsR5IzpsA" pk_name="fk_user_id|fk_role_id"/>
@@ -2165,9 +2199,9 @@
   <Chronos:ChiValue xmi:id="_FvzEELTTEeOYkOsR5IzpsA" base_Property="_EVGnsLTTEeOYkOsR5IzpsA"/>
   <Chronos:ChiValue xmi:id="_HSyg0LTTEeOYkOsR5IzpsA" db_data_type="DATETIME" input_type="date" base_Property="_EZrlsLTTEeOYkOsR5IzpsA"/>
   <Chronos:ChiValue xmi:id="_eH_2oLTWEeOYkOsR5IzpsA" is_editable="true" base_Property="_blxxgLTWEeOYkOsR5IzpsA"/>
-  <Chronos:ChiNode xmi:id="_GgG9sLU2EeORdpT3S9OOtw" base_Class="_BDrKMLU2EeORdpT3S9OOtw" display_value="name,color" is_searchable="true" is_soap="true" orderby="name"/>
+  <Chronos:ChiNode xmi:id="_GgG9sLU2EeORdpT3S9OOtw" base_Class="_BDrKMLU2EeORdpT3S9OOtw" display_value="name" is_searchable="true" is_soap="true" orderby="name"/>
   <Chronos:ChiValue xmi:id="_WaA1oLU2EeORdpT3S9OOtw" is_editable="true" base_Property="_UsqjALU2EeORdpT3S9OOtw"/>
-  <Chronos:ChiNode xmi:id="_cDacMLU4EeORdpT3S9OOtw" base_Class="_BMnDwLU2EeORdpT3S9OOtw" display_value="name,category,user" is_searchable="true" is_soap="true" orderby="sortkey"/>
+  <Chronos:ChiNode xmi:id="_cDacMLU4EeORdpT3S9OOtw" base_Class="_BMnDwLU2EeORdpT3S9OOtw" child_order="Category,Rating,Image" display_value="name,category,user" is_searchable="true" is_soap="true" orderby="name"/>
   <Chronos:ChiValue xmi:id="_p0IaELU4EeORdpT3S9OOtw" is_editable="true" base_Property="_kq-u8LU4EeORdpT3S9OOtw"/>
   <Chronos:ChiNode xmi:id="_uWjcYLU4EeORdpT3S9OOtw" base_Class="_BQLVILU2EeORdpT3S9OOtw" display_value="filename" is_searchable="true" is_soap="true" orderby="sortkey DESC"/>
   <Chronos:ChiValue xmi:id="_169B8LU4EeORdpT3S9OOtw" is_editable="true" input_type="filebrowser" display_type="image" column_name="file" base_Property="_0UxuULU4EeORdpT3S9OOtw"/>
@@ -2176,7 +2210,7 @@
   <Chronos:ChiView xmi:id="_Pa9YcPu5EeOmMdys2glKCA" base_Class="_MLKboPu5EeOmMdys2glKCA"/>
   <Chronos:ChiActionKey xmi:id="_lLMKkPu5EeOmMdys2glKCA" base_Association="_lK86APu5EeOmMdys2glKCA"/>
   <Chronos:ChiValue xmi:id="_hAlnMDQ0EeSRmq5T8ey5JQ" base_Property="_hAkZEDQ0EeSRmq5T8ey5JQ"/>
-  <Chronos:ChiNode xmi:id="_VG9c4DkNEeSAepGYcnIyuw" base_Class="_VEQuMDkNEeSAepGYcnIyuw" display_value="resource|context|action|roles"/>
+  <Chronos:ChiNode xmi:id="_VG9c4DkNEeSAepGYcnIyuw" base_Class="_VEQuMDkNEeSAepGYcnIyuw" display_value="resource,context,action,roles"/>
   <Chronos:ChiValue xmi:id="_VG-D8DkNEeSAepGYcnIyuw" is_editable="true" base_Property="_VEQuMTkNEeSAepGYcnIyuw"/>
   <Chronos:ChiValue xmi:id="_VG-rADkNEeSAepGYcnIyuw" is_editable="true" base_Property="_VEQuNTkNEeSAepGYcnIyuw"/>
   <Chronos:ChiValue xmi:id="_VG_SEDkNEeSAepGYcnIyuw" is_editable="true" base_Property="_VEQuOTkNEeSAepGYcnIyuw"/>
@@ -2193,9 +2227,8 @@
   <Chronos:ChiValue xmi:id="_KXEGoMNyEeabSe-F2MKJtA" db_data_type="INT(1)" is_editable="true" input_type="binarycheckbox" display_type="check" base_Property="_KXBDUMNyEeabSe-F2MKJtA"/>
   <Chronos:ChiValue xmi:id="_bUTD0MNyEeabSe-F2MKJtA" db_data_type="INT(1)" input_type="binarycheckbox" display_type="check" base_Property="_bUR1sMNyEeabSe-F2MKJtA"/>
   <Chronos:ChiNode xmi:id="_ISYmwC9aEeeAOsdIWnGkQQ" base_Class="_ISXYoC9aEeeAOsdIWnGkQQ" display_value="value" is_searchable="true" is_soap="true" orderby="value DESC"/>
-  <Chronos:ChiValue xmi:id="_ISZ04C9aEeeAOsdIWnGkQQ" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;config&quot;,&quot;section&quot;:&quot;rating&quot;}}" column_name="file" base_Property="_ISXYoi9aEeeAOsdIWnGkQQ"/>
+  <Chronos:ChiValue xmi:id="_ISZ04C9aEeeAOsdIWnGkQQ" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;config&quot;,&quot;section&quot;:&quot;rating&quot;}}" column_name="" base_Property="_ISXYoi9aEeeAOsdIWnGkQQ"/>
   <Chronos:ChiValue xmi:id="_k_rXkC_cEeeCKtxl1f5_Nw" is_editable="true" input_type="textarea" base_Property="_k7roYC_cEeeCKtxl1f5_Nw"/>
-  <Chronos:ChiValue xmi:id="_24ZsoC_cEeeCKtxl1f5_Nw" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;node&quot;,&quot;types&quot;:[&quot;Category&quot;]}}" column_name="" base_Property="_24XQYC_cEeeCKtxl1f5_Nw"/>
   <Chronos:ChiValue xmi:id="_SSYVgC_dEeeCKtxl1f5_Nw" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;node&quot;,&quot;types&quot;:[&quot;User&quot;]}}" column_name="" base_Property="_SSUrIC_dEeeCKtxl1f5_Nw"/>
   <Chronos:ChiValue xmi:id="_iR-lwC_dEeeCKtxl1f5_Nw" is_editable="true" input_type="color" display_type="color" base_Property="_iR8wkC_dEeeCKtxl1f5_Nw"/>
   <Chronos:ChiSystem xmi:id="_o-G_MC_gEeeCKtxl1f5_Nw" plattform="wcmf" config="backend.ini" base_Class="_hxj48C_gEeeCKtxl1f5_Nw"/>
@@ -2350,4 +2383,6 @@
   <Chronos:ChiActionKey xmi:id="_2JLWUE5mEeSEGaIVag_Y7g" action="checkPermissionsOfUser" base_Association="_0Wnzk05mEeSEGaIVag_Y7g"/>
   <Chronos:ChiSystem xmi:id="_87vC0KprEeaGbp23C_zkpg" plattform="wcmf" base_Class="_86xaM6prEeaGbp23C_zkpg"/>
   <Chronos:ChiSystem xmi:id="_h9sdYDAVEeegMP-1ROaXlw" plattform="wcmf" config="backend.ini" base_Class="_h9paEDAVEeegMP-1ROaXlw"/>
+  <Chronos:ChiAssociation xmi:id="_TozuIDCnEeezbITIq6j96g" fk_name="category" base_Association="_DbVZ8DCnEeezbITIq6j96g"/>
+  <Chronos:ChiSystem xmi:id="_Wf7sQDCnEeezbITIq6j96g" plattform="wcmf" config="backend.ini" base_Class="_Wf53EDCnEeezbITIq6j96g"/>
 </xmi:XMI>

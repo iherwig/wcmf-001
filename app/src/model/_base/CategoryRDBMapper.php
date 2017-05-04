@@ -87,7 +87,7 @@ class CategoryRDBMapper extends NodeUnifiedRDBMapper {
   public function getProperties() {
     return [
       'isSearchable' => true,
-      'displayValues' => ['name', 'color'],
+      'displayValues' => ['name'],
 // PROTECTED REGION ID(app/src/model/_base/CategoryRDBMapper.php/Properties) ENABLED START
 // PROTECTED REGION END
     ];
@@ -107,6 +107,10 @@ class CategoryRDBMapper extends NodeUnifiedRDBMapper {
    */
   protected function getRelationDescriptions() {
     return [
+      'Location' => new RDBOneToManyRelationDescription(
+        'app.src.model.Category', 'Category', 'app.src.model.Location', 'Location',
+        '1', '1', '0', 'unbounded', 'none', 'composite', 'true', 'true', 'child', 'id', 'category'
+      ),
     ];
   }
 
@@ -164,5 +168,7 @@ class CategoryRDBMapper extends NodeUnifiedRDBMapper {
 /**
  * Additional names to be included by l10n tools ([Pl.]: plural forms)
  * - $message->getText("Category [Pl.]")
+ * - $message->getText("Location")
+ * - $message->getText("Location [Pl.]")
  * Restrictions descriptions to be included by l10n tools
  */

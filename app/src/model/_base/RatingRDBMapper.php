@@ -130,7 +130,7 @@ class RatingRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'value' => new RDBAttributeDescription('value', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"config","section":"rating"}}', 'text', 'Rating', 'file'),
+      'value' => new RDBAttributeDescription('value', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"config","section":"rating"}}', 'text', 'Rating', 'value'),
      /**
       *
       */

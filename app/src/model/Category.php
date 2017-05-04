@@ -19,6 +19,7 @@ use app\src\model\_base\CategoryBase;
  * @var creator (String)
  * @var modified (Date)
  * @var last_editor (String)
+ * @rel Location (app.src.model.Location, 1:n)
  */
 class Category extends CategoryBase {
 // PROTECTED REGION ID(app/src/model/Category.php/Body) ENABLED START
