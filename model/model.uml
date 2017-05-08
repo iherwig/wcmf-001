@@ -1681,17 +1681,6 @@
                   <defaultValue xmi:type="uml:LiteralString" xmi:id="_fcwjnKvwEeaQUopA1XIUeQ" value="{Location, Category}"/>
                 </ownedAttribute>
               </packagedElement>
-              <packagedElement xmi:type="uml:Class" xmi:id="_hxj48C_gEeeCKtxl1f5_Nw" name="EntityStage">
-                <ownedAttribute xmi:type="uml:Property" xmi:id="_hxj48S_gEeeCKtxl1f5_Nw" name="0" type="_agg3ALQwEeOLlbB2YLI0iw">
-                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_hxj48i_gEeeCKtxl1f5_Nw" value="archive"/>
-                </ownedAttribute>
-                <ownedAttribute xmi:type="uml:Property" xmi:id="_hxj48y_gEeeCKtxl1f5_Nw" name="1" type="_agg3ALQwEeOLlbB2YLI0iw">
-                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_hxj49C_gEeeCKtxl1f5_Nw" value="preview"/>
-                </ownedAttribute>
-                <ownedAttribute xmi:type="uml:Property" xmi:id="_hxj49S_gEeeCKtxl1f5_Nw" name="2" type="_agg3ALQwEeOLlbB2YLI0iw">
-                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_hxj49i_gEeeCKtxl1f5_Nw" value="publish"/>
-                </ownedAttribute>
-              </packagedElement>
               <packagedElement xmi:type="uml:Class" xmi:id="_Evc_MC_hEeeCKtxl1f5_Nw" name="Languages">
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_Evc_MS_hEeeCKtxl1f5_Nw" name="__inherit" visibility="public" type="_agg3ALQwEeOLlbB2YLI0iw">
                   <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Evc_Mi_hEeeCKtxl1f5_Nw" value="1"/>
@@ -1726,6 +1715,11 @@
                 </ownedAttribute>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_kqu-EDCnEeezbITIq6j96g" name="5" type="_agg3ALQwEeOLlbB2YLI0iw">
                   <defaultValue xmi:type="uml:LiteralString" xmi:id="_kqvlIDCnEeezbITIq6j96g" value="★★★★★"/>
+                </ownedAttribute>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_xhuZwDQ4EeevXLDJEeKv_w" name="Authorization">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_xhuZwTQ4EeevXLDJEeKv_w" name="app.src.model.wcmf.User??read" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_xhuZwjQ4EeevXLDJEeKv_w" value="-anonymous +*"/>
                 </ownedAttribute>
               </packagedElement>
             </packagedElement>
@@ -2061,7 +2055,9 @@
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_kq-u8LU4EeORdpT3S9OOtw" name="name" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_SSUrIC_dEeeCKtxl1f5_Nw" name="user" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_k7roYC_cEeeCKtxl1f5_Nw" name="address" type="_agg3ALQwEeOLlbB2YLI0iw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_mUpaIDQ0EeevXLDJEeKv_w" name="website" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_njBmAPT-EeSdk57oe2HXMQ" name="notes" type="_agg3ALQwEeOLlbB2YLI0iw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_iy1AkDQxEeevXLDJEeKv_w" name="archived" type="_dbezULQwEeOLlbB2YLI0iw"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Class" xmi:id="_BQLVILU2EeORdpT3S9OOtw" name="Image">
                 <generalization xmi:type="uml:Generalization" xmi:id="_iovDALU7EeORdpT3S9OOtw" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>
@@ -2202,7 +2198,7 @@
   <Chronos:ChiValue xmi:id="_eH_2oLTWEeOYkOsR5IzpsA" is_editable="true" base_Property="_blxxgLTWEeOYkOsR5IzpsA"/>
   <Chronos:ChiNode xmi:id="_GgG9sLU2EeORdpT3S9OOtw" base_Class="_BDrKMLU2EeORdpT3S9OOtw" display_value="name" is_searchable="true" is_soap="true" orderby="name"/>
   <Chronos:ChiValue xmi:id="_WaA1oLU2EeORdpT3S9OOtw" is_editable="true" base_Property="_UsqjALU2EeORdpT3S9OOtw"/>
-  <Chronos:ChiNode xmi:id="_cDacMLU4EeORdpT3S9OOtw" base_Class="_BMnDwLU2EeORdpT3S9OOtw" child_order="Category,Rating,Image" display_value="name,category,user" is_searchable="true" is_soap="true" orderby="name"/>
+  <Chronos:ChiNode xmi:id="_cDacMLU4EeORdpT3S9OOtw" base_Class="_BMnDwLU2EeORdpT3S9OOtw" child_order="Category,Rating,Image" display_value="name" is_searchable="true" is_soap="true" orderby="name"/>
   <Chronos:ChiValue xmi:id="_p0IaELU4EeORdpT3S9OOtw" is_editable="true" base_Property="_kq-u8LU4EeORdpT3S9OOtw"/>
   <Chronos:ChiNode xmi:id="_uWjcYLU4EeORdpT3S9OOtw" base_Class="_BQLVILU2EeORdpT3S9OOtw" display_value="filename" is_searchable="true" is_soap="true" orderby="sortkey DESC"/>
   <Chronos:ChiValue xmi:id="_169B8LU4EeORdpT3S9OOtw" is_editable="true" input_type="filebrowser" display_type="image" column_name="file" base_Property="_0UxuULU4EeORdpT3S9OOtw"/>
@@ -2230,9 +2226,8 @@
   <Chronos:ChiNode xmi:id="_ISYmwC9aEeeAOsdIWnGkQQ" base_Class="_ISXYoC9aEeeAOsdIWnGkQQ" display_value="value" is_searchable="true" is_soap="true" orderby="value DESC"/>
   <Chronos:ChiValue xmi:id="_ISZ04C9aEeeAOsdIWnGkQQ" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;config&quot;,&quot;section&quot;:&quot;rating&quot;}}" column_name="" base_Property="_ISXYoi9aEeeAOsdIWnGkQQ"/>
   <Chronos:ChiValue xmi:id="_k_rXkC_cEeeCKtxl1f5_Nw" is_editable="true" input_type="textarea" base_Property="_k7roYC_cEeeCKtxl1f5_Nw"/>
-  <Chronos:ChiValue xmi:id="_SSYVgC_dEeeCKtxl1f5_Nw" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;node&quot;,&quot;types&quot;:[&quot;User&quot;]}}" column_name="" base_Property="_SSUrIC_dEeeCKtxl1f5_Nw"/>
+  <Chronos:ChiValue xmi:id="_SSYVgC_dEeeCKtxl1f5_Nw" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;node&quot;,&quot;types&quot;:[&quot;User&quot;],&quot;emptyItem&quot;:&quot;&quot;}}" column_name="" base_Property="_SSUrIC_dEeeCKtxl1f5_Nw"/>
   <Chronos:ChiValue xmi:id="_iR-lwC_dEeeCKtxl1f5_Nw" is_editable="true" input_type="color" display_type="color" base_Property="_iR8wkC_dEeeCKtxl1f5_Nw"/>
-  <Chronos:ChiSystem xmi:id="_o-G_MC_gEeeCKtxl1f5_Nw" plattform="wcmf" config="backend.ini" base_Class="_hxj48C_gEeeCKtxl1f5_Nw"/>
   <Chronos:ChiSystem xmi:id="_PdL3wC_iEeeCKtxl1f5_Nw" plattform="wcmf" config="backend.ini" base_Class="_Evc_MC_hEeeCKtxl1f5_Nw"/>
   <Chronos:ChiSystem xmi:id="_QS9pMC_iEeeCKtxl1f5_Nw" plattform="wcmf" config="backend.ini" base_Class="_EvdmQC_hEeeCKtxl1f5_Nw"/>
   <Chronos:ChiSystem xmi:id="_vuSLIC_jEeeCKtxl1f5_Nw" plattform="wcmf" config="backend.ini" base_Class="_sj4EoC_jEeeCKtxl1f5_Nw"/>
@@ -2387,4 +2382,7 @@
   <Chronos:ChiAssociation xmi:id="_TozuIDCnEeezbITIq6j96g" fk_name="category" base_Association="_DbVZ8DCnEeezbITIq6j96g"/>
   <Chronos:ChiSystem xmi:id="_Wf7sQDCnEeezbITIq6j96g" plattform="wcmf" config="backend.ini" base_Class="_Wf53EDCnEeezbITIq6j96g"/>
   <Chronos:ChiValue xmi:id="_YWjvcDQEEeehUPMpNnhF3Q" is_editable="true" base_Property="_YRqoYDQEEeehUPMpNnhF3Q"/>
+  <Chronos:ChiValue xmi:id="_i3IRwDQxEeevXLDJEeKv_w" db_data_type="INT(1)" is_editable="true" input_type="binarycheckbox" display_type="check" base_Property="_iy1AkDQxEeevXLDJEeKv_w"/>
+  <Chronos:ChiValue xmi:id="_mUsdcDQ0EeevXLDJEeKv_w" is_editable="true" base_Property="_mUpaIDQ0EeevXLDJEeKv_w"/>
+  <Chronos:ChiSystem xmi:id="_xhuZyzQ4EeevXLDJEeKv_w" plattform="wcmf" config="backend.ini" base_Class="_xhuZwDQ4EeevXLDJEeKv_w"/>
 </xmi:XMI>

@@ -198,10 +198,12 @@ define([
                 var type = 'Location';
                 var store = Store.getStore(type, config.app.defaultLanguage);
                 store.setExtraParam('values', 'id,name,address,user');
-                var filter = new store.Filter().eq(type+'.category', category.id);
+                var filter = new store.Filter().eq(type+'.category', category.id).
+                        ne(type+'.archived', 1);
                 if (query) {
-                    filter = store.Filter().and(filter,
-                        new store.Filter().match(type+'.name', new RegExp('.*'+query+'.*', 'i')));
+                    filter = filter.and(
+                        new store.Filter().match(type+'.name', new RegExp('.*'+query+'.*', 'i'))
+                    );
                 }
                 store.filter(filter).fetch().then(lang.hitch(this, function(locations) {
                     this.statusNode.innerHTML = Dict.translate("%0% item(s)", ["0/"+locations.length]);

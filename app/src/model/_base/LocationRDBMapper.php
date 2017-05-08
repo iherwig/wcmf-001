@@ -53,7 +53,9 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       elseif ($name == 'name') { $displayName = $message->getText("name"); }
       elseif ($name == 'user') { $displayName = $message->getText("user"); }
       elseif ($name == 'address') { $displayName = $message->getText("address"); }
+      elseif ($name == 'website') { $displayName = $message->getText("website"); }
       elseif ($name == 'notes') { $displayName = $message->getText("notes"); }
+      elseif ($name == 'archived') { $displayName = $message->getText("archived"); }
       elseif ($name == 'created') { $displayName = $message->getText("created"); }
       elseif ($name == 'creator') { $displayName = $message->getText("creator"); }
       elseif ($name == 'modified') { $displayName = $message->getText("modified"); }
@@ -72,7 +74,9 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       elseif ($name == 'name') { $description = $message->getText(""); }
       elseif ($name == 'user') { $description = $message->getText(""); }
       elseif ($name == 'address') { $description = $message->getText(""); }
+      elseif ($name == 'website') { $description = $message->getText(""); }
       elseif ($name == 'notes') { $description = $message->getText(""); }
+      elseif ($name == 'archived') { $description = $message->getText(""); }
       elseif ($name == 'created') { $description = $message->getText(""); }
       elseif ($name == 'creator') { $description = $message->getText(""); }
       elseif ($name == 'modified') { $description = $message->getText(""); }
@@ -93,7 +97,7 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
   public function getProperties() {
     return [
       'isSearchable' => true,
-      'displayValues' => ['name', 'category', 'user'],
+      'displayValues' => ['name'],
       'relationOrder' => ['Category', 'Rating', 'Image'],
 // PROTECTED REGION ID(app/src/model/_base/LocationRDBMapper.php/Properties) ENABLED START
 // PROTECTED REGION END
@@ -149,7 +153,7 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'user' => new RDBAttributeDescription('user', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"node","types":["User"]}}', 'text', 'Location', 'user'),
+      'user' => new RDBAttributeDescription('user', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"node","types":["User"],"emptyItem":""}}', 'text', 'Location', 'user'),
      /**
       *
       */
@@ -157,7 +161,15 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
+      'website' => new RDBAttributeDescription('website', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'text', 'text', 'Location', 'website'),
+     /**
+      *
+      */
       'notes' => new RDBAttributeDescription('notes', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'ckeditor:{"toolbarSet":"wcmf"}', 'text', 'Location', 'notes'),
+     /**
+      *
+      */
+      'archived' => new RDBAttributeDescription('archived', 'Integer', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'binarycheckbox', 'check', 'Location', 'archived'),
      /**
       *
       */
