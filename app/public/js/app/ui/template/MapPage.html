@@ -13,11 +13,15 @@
           <a href="#" data-dojo-attach-event="onClick:_navigateMedia">{translate:Media Pool} &raquo;</a>
         </p></div>
         <div class="pull-right">
-          <div data-dojo-attach-point="categoryControl"></div>
+          <span data-dojo-attach-point="statusNode"></span>
+          <span data-dojo-attach-point="categoryControl"></span>
+          <span data-dojo-attach-point="searchControl"></span>
         </div>
       </div>
 
-      <div id="map" style="height: 480px;"></div><hr>
+      <div id="map" style="height: 480px;"></div>
+      <div data-dojo-attach-point="mapErrorNode"></div>
+      <hr>
 
       <p>{translate:Last Updates}</p>
       <div data-dojo-attach-point="toolbarNode"></div>

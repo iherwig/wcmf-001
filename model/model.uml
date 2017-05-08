@@ -2053,6 +2053,7 @@
               <packagedElement xmi:type="uml:Class" xmi:id="_BDrKMLU2EeORdpT3S9OOtw" name="Category">
                 <generalization xmi:type="uml:Generalization" xmi:id="_TyMXcLU5EeORdpT3S9OOtw" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_UsqjALU2EeORdpT3S9OOtw" name="name" type="_agg3ALQwEeOLlbB2YLI0iw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_YRqoYDQEEeehUPMpNnhF3Q" name="icon" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_iR8wkC_dEeeCKtxl1f5_Nw" name="color" type="_agg3ALQwEeOLlbB2YLI0iw"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Class" xmi:id="_BMnDwLU2EeORdpT3S9OOtw" name="Location">
@@ -2385,4 +2386,5 @@
   <Chronos:ChiSystem xmi:id="_h9sdYDAVEeegMP-1ROaXlw" plattform="wcmf" config="backend.ini" base_Class="_h9paEDAVEeegMP-1ROaXlw"/>
   <Chronos:ChiAssociation xmi:id="_TozuIDCnEeezbITIq6j96g" fk_name="category" base_Association="_DbVZ8DCnEeezbITIq6j96g"/>
   <Chronos:ChiSystem xmi:id="_Wf7sQDCnEeezbITIq6j96g" plattform="wcmf" config="backend.ini" base_Class="_Wf53EDCnEeezbITIq6j96g"/>
+  <Chronos:ChiValue xmi:id="_YWjvcDQEEeehUPMpNnhF3Q" is_editable="true" base_Property="_YRqoYDQEEeehUPMpNnhF3Q"/>
 </xmi:XMI>

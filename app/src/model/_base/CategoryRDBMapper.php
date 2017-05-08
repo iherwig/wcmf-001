@@ -50,6 +50,7 @@ class CategoryRDBMapper extends NodeUnifiedRDBMapper {
     if (false) {}
       elseif ($name == 'id') { $displayName = $message->getText("id"); }
       elseif ($name == 'name') { $displayName = $message->getText("name"); }
+      elseif ($name == 'icon') { $displayName = $message->getText("icon"); }
       elseif ($name == 'color') { $displayName = $message->getText("color"); }
       elseif ($name == 'created') { $displayName = $message->getText("created"); }
       elseif ($name == 'creator') { $displayName = $message->getText("creator"); }
@@ -66,6 +67,7 @@ class CategoryRDBMapper extends NodeUnifiedRDBMapper {
     if (false) {}
       elseif ($name == 'id') { $description = $message->getText(""); }
       elseif ($name == 'name') { $description = $message->getText(""); }
+      elseif ($name == 'icon') { $description = $message->getText(""); }
       elseif ($name == 'color') { $description = $message->getText(""); }
       elseif ($name == 'created') { $description = $message->getText(""); }
       elseif ($name == 'creator') { $description = $message->getText(""); }
@@ -127,6 +129,10 @@ class CategoryRDBMapper extends NodeUnifiedRDBMapper {
       *
       */
       'name' => new RDBAttributeDescription('name', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'text', 'text', 'Category', 'name'),
+     /**
+      *
+      */
+      'icon' => new RDBAttributeDescription('icon', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'text', 'text', 'Category', 'icon'),
      /**
       *
       */

@@ -49,6 +49,18 @@ define([
             defaultValue: null,
             isReference: false
         }, {
+            name: "icon",
+            type: "String",
+            description: "",
+            isEditable: true,
+            inputType: "text",
+            displayType: "text",
+            validateType: "",
+            validateDesc: "",
+            tags: ["DATATYPE_ATTRIBUTE"],
+            defaultValue: null,
+            isReference: false
+        }, {
             name: "color",
             type: "String",
             description: "",

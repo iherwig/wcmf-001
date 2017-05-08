@@ -14,6 +14,7 @@ use app\src\model\_base\CategoryBase;
  *
  * @var id
  * @var name (String)
+ * @var icon (String)
  * @var color (String)
  * @var created (Date)
  * @var creator (String)

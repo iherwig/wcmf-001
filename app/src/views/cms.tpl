@@ -50,6 +50,7 @@
               { name: 'elfinder', location: 'vendor/studio-42/elfinder-js' },
               { name: 'leaflet', location: 'https://unpkg.com/leaflet@1.0.3/dist' },
               { name: 'leaflet-geocoder', location: 'https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.4' },
+              { name: 'leaflet-markers', location: 'https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2' },
 
               { name: 'app', location: '.' }
           ],
