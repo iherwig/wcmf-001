@@ -86,7 +86,7 @@ $messages_de['Copying <em>%0%</em>'] = 'Kopiere <em>%0%</em>';
 // file(s): application/controller/CopyController.php
 $messages_de['Copying tree: continue with %0%'] = 'Kopiere Baum: weiter mit %0%';
 // file(s): public/js/ui/data/widget/template/EntityListWidget.html
-$messages_de['Create %0%'] = 'Erstelle %0%';
+$messages_de['Create %0%'] = '%0% erstellen';
 // file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/wcmf/_base/LockRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_de['created'] = 'Erstellt';
 // file(s): public/js/ui/admin/template/AdminPage.html
@@ -122,7 +122,7 @@ $messages_de['Embed Code'] = 'Einbetten-Code';
 // file(s): public/js/ui/error/ErrorPage.js
 $messages_de['Error'] = 'Fehler';
 // file(s): public/js/ui/data/widget/template/EntityListWidget.html
-$messages_de['Export CSV'] = 'Export CSV';
+$messages_de['Export CSV'] = 'CSV exportieren';
 // file(s): application/controller/CSVExportController.php
 $messages_de['Exporting %0%'] = 'Exportiere %0%';
 // file(s): application/controller/XMLExportController.php

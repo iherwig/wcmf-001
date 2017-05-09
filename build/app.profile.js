@@ -123,6 +123,8 @@ var appSrc = [
     "app/js/config/custom_routes",
     "app/js/config/types",
 
+    "app/js/app/ui/MapPage",
+
     "dgrid/util/touch"
 ];
 
