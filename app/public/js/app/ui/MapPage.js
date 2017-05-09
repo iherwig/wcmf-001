@@ -197,9 +197,11 @@ define([
                 this.markers = [];
                 var type = 'Location';
                 var store = Store.getStore(type, config.app.defaultLanguage);
-                store.setExtraParam('values', 'id,name,address,user');
-                var filter = new store.Filter().eq(type+'.category', category.id).
-                        ne(type+'.archived', 1);
+                store.setExtraParam('values', 'id,name,address,website,user');
+                var filter = new store.Filter().eq(type+'.category', category.id).or(
+                          new store.Filter().ne(type+'.archived', 1),
+                          new store.Filter().eq(type+'.archived', null)
+                );
                 if (query) {
                     filter = filter.and(
                         new store.Filter().match(type+'.name', new RegExp('.*'+query+'.*', 'i'))
@@ -247,6 +249,7 @@ define([
             marker.bindPopup(
                     '<strong>'+location.name+'</strong><br>'+
                     location.address.replace(/\n/g, '<br>')+
+                    (location.website ? '<br><a href="'+location.website+'" target="_blank">'+location.website+'</a>' : '')+
                     '<br><a href="'+this.getLocationUrl(location.id)+'">'+Dict.translate('Edit')+'</a>'
             );
             marker.on('mouseover', function (e) {
