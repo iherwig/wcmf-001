@@ -14,6 +14,7 @@ use wcmf\lib\model\mapper\RDBManyToManyRelationDescription;
 use wcmf\lib\model\mapper\RDBManyToOneRelationDescription;
 use wcmf\lib\model\mapper\RDBOneToManyRelationDescription;
 use wcmf\lib\persistence\ReferenceDescription;
+use wcmf\lib\persistence\TransientAttributeDescription;
 use wcmf\lib\persistence\ObjectId;
 
 /**
@@ -113,7 +114,7 @@ class PermissionRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'id' => new RDBAttributeDescription('id', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Permission', 'id'),
+      'id' => new RDBAttributeDescription('id', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Permission', 'id'),
      /**
       *
       */

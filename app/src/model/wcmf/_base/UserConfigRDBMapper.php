@@ -14,6 +14,7 @@ use wcmf\lib\model\mapper\RDBManyToManyRelationDescription;
 use wcmf\lib\model\mapper\RDBManyToOneRelationDescription;
 use wcmf\lib\model\mapper\RDBOneToManyRelationDescription;
 use wcmf\lib\persistence\ReferenceDescription;
+use wcmf\lib\persistence\TransientAttributeDescription;
 use wcmf\lib\persistence\ObjectId;
 
 /**
@@ -115,11 +116,11 @@ class UserConfigRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'id' => new RDBAttributeDescription('id', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'UserConfig', 'id'),
+      'id' => new RDBAttributeDescription('id', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'UserConfig', 'id'),
      /**
       *
       */
-      'fk_user_id' => new RDBAttributeDescription('fk_user_id', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'UserConfig', 'fk_user_id'),
+      'fk_user_id' => new RDBAttributeDescription('fk_user_id', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'UserConfig', 'fk_user_id'),
      /**
       *
       */

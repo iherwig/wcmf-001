@@ -20,6 +20,7 @@ use app\src\model\_base\LocationBase;
  * @var website (String)
  * @var notes (String)
  * @var archived (Integer)
+ * @var rating (Integer)
  * @var created (Date)
  * @var creator (String)
  * @var modified (Date)
@@ -31,4 +32,12 @@ use app\src\model\_base\LocationBase;
 class Location extends LocationBase {
 // PROTECTED REGION ID(app/src/model/Location.php/Body) ENABLED START
 // PROTECTED REGION END
+  /**
+   * Location::getRating()
+   * @return Integer
+   */
+  public function getRating() {
+// PROTECTED REGION ID(app/src/model/Location.php/Methods/getRating) ENABLED START
+// PROTECTED REGION END
+  }
 }

@@ -14,6 +14,7 @@ use wcmf\lib\model\mapper\RDBManyToManyRelationDescription;
 use wcmf\lib\model\mapper\RDBManyToOneRelationDescription;
 use wcmf\lib\model\mapper\RDBOneToManyRelationDescription;
 use wcmf\lib\persistence\ReferenceDescription;
+use wcmf\lib\persistence\TransientAttributeDescription;
 use wcmf\lib\persistence\ObjectId;
 
 /**
@@ -141,11 +142,11 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'id' => new RDBAttributeDescription('id', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Location', 'id'),
+      'id' => new RDBAttributeDescription('id', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Location', 'id'),
      /**
       *
       */
-      'category' => new RDBAttributeDescription('category', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Location', 'category'),
+      'category' => new RDBAttributeDescription('category', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Location', 'category'),
      /**
       *
       */
@@ -170,6 +171,10 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       *
       */
       'archived' => new RDBAttributeDescription('archived', 'Integer', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'binarycheckbox', 'check', 'Location', 'archived'),
+     /**
+      *
+      */
+      'rating' => new TransientAttributeDescription('rating', 'Integer'),
      /**
       *
       */

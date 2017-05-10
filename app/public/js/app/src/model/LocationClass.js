@@ -26,7 +26,7 @@ define([
 
         attributes: [{
             name: "id",
-            type: "",
+            type: "Integer",
             description: "",
             isEditable: false,
             inputType: "text",
@@ -38,7 +38,7 @@ define([
             isReference: false
         }, {
             name: "category",
-            type: "",
+            type: "Integer",
             description: "",
             isEditable: false,
             inputType: "text",
@@ -120,6 +120,10 @@ define([
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
             isReference: false
+        }, {
+            name: "rating",
+            type: "Integer",
+            tags: ["DATATYPE_ATTRIBUTE"],
         }, {
             name: "created",
             type: "Date",

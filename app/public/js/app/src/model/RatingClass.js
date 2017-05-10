@@ -26,7 +26,7 @@ define([
 
         attributes: [{
             name: "id",
-            type: "",
+            type: "Integer",
             description: "",
             isEditable: false,
             inputType: "text",
@@ -38,7 +38,7 @@ define([
             isReference: false
         }, {
             name: "fk_location_id",
-            type: "",
+            type: "Integer",
             description: "",
             isEditable: false,
             inputType: "text",
@@ -60,6 +60,10 @@ define([
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
             isReference: false
+        }, {
+            name: "",
+            type: "Location",
+            tags: ["DATATYPE_ATTRIBUTE"],
         }, {
             name: "created",
             type: "Date",

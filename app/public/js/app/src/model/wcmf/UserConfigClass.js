@@ -26,7 +26,7 @@ define([
 
         attributes: [{
             name: "id",
-            type: "",
+            type: "Integer",
             description: "",
             isEditable: false,
             inputType: "text",
@@ -38,7 +38,7 @@ define([
             isReference: false
         }, {
             name: "fk_user_id",
-            type: "",
+            type: "Integer",
             description: "",
             isEditable: false,
             inputType: "text",

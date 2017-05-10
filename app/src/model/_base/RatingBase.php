@@ -25,6 +25,16 @@ abstract class RatingBase extends EntityBase {
   }
 
   /**
+   * @see PersistentObject::getValue()
+   */
+  public function getValue($name) {
+    if ($name == '') {
+      return $this->getnull();
+    }
+    return parent::getValue($name);
+  }
+
+  /**
    * Get the Location instances in the Location relation
    * @return Array of Location instances
    */

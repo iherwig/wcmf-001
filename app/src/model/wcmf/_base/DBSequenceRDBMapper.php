@@ -14,6 +14,7 @@ use wcmf\lib\model\mapper\RDBManyToManyRelationDescription;
 use wcmf\lib\model\mapper\RDBManyToOneRelationDescription;
 use wcmf\lib\model\mapper\RDBOneToManyRelationDescription;
 use wcmf\lib\persistence\ReferenceDescription;
+use wcmf\lib\persistence\TransientAttributeDescription;
 use wcmf\lib\persistence\ObjectId;
 
 /**
@@ -107,7 +108,7 @@ class DBSequenceRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'table' => new RDBAttributeDescription('table', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', false, 'text', 'text', 'DBSequence', 'table'),
+      'table' => new RDBAttributeDescription('table', 'Integer', ['DATATYPE_ATTRIBUTE'], null, '', '', false, 'text', 'text', 'DBSequence', 'table'),
      /**
       *
       */

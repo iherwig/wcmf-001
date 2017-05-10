@@ -15,6 +15,7 @@ use app\src\model\_base\RatingBase;
  * @var id
  * @var fk_location_id
  * @var value (String)
+ * @var  (Location)
  * @var created (Date)
  * @var creator (String)
  * @var modified (Date)
@@ -24,4 +25,12 @@ use app\src\model\_base\RatingBase;
 class Rating extends RatingBase {
 // PROTECTED REGION ID(app/src/model/Rating.php/Body) ENABLED START
 // PROTECTED REGION END
+  /**
+   * Rating::getnull()
+   * @return Location
+   */
+  public function getnull() {
+// PROTECTED REGION ID(app/src/model/Rating.php/Methods/getnull) ENABLED START
+// PROTECTED REGION END
+  }
 }

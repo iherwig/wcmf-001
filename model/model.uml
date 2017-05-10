@@ -2058,6 +2058,7 @@
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_mUpaIDQ0EeevXLDJEeKv_w" name="website" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_njBmAPT-EeSdk57oe2HXMQ" name="notes" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_iy1AkDQxEeevXLDJEeKv_w" name="archived" type="_dbezULQwEeOLlbB2YLI0iw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_XvRSkDWcEee8dos4GEyIug" name="rating" type="_dbezULQwEeOLlbB2YLI0iw"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Class" xmi:id="_BQLVILU2EeORdpT3S9OOtw" name="Image">
                 <generalization xmi:type="uml:Generalization" xmi:id="_iovDALU7EeORdpT3S9OOtw" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>

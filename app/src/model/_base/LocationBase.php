@@ -25,6 +25,16 @@ abstract class LocationBase extends EntityBase {
   }
 
   /**
+   * @see PersistentObject::getValue()
+   */
+  public function getValue($name) {
+    if ($name == 'rating') {
+      return $this->getRating();
+    }
+    return parent::getValue($name);
+  }
+
+  /**
    * Get the Category instances in the Category relation
    * @return Array of Category instances
    */

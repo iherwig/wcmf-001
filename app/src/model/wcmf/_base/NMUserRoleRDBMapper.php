@@ -14,6 +14,7 @@ use wcmf\lib\model\mapper\RDBManyToManyRelationDescription;
 use wcmf\lib\model\mapper\RDBManyToOneRelationDescription;
 use wcmf\lib\model\mapper\RDBOneToManyRelationDescription;
 use wcmf\lib\persistence\ReferenceDescription;
+use wcmf\lib\persistence\TransientAttributeDescription;
 use wcmf\lib\persistence\ObjectId;
 
 /**
@@ -115,11 +116,11 @@ class NMUserRoleRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'fk_role_id' => new RDBAttributeDescription('fk_role_id', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'NMUserRole', 'fk_role_id'),
+      'fk_role_id' => new RDBAttributeDescription('fk_role_id', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'NMUserRole', 'fk_role_id'),
      /**
       *
       */
-      'fk_user_id' => new RDBAttributeDescription('fk_user_id', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'NMUserRole', 'fk_user_id'),
+      'fk_user_id' => new RDBAttributeDescription('fk_user_id', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'NMUserRole', 'fk_user_id'),
     ];
   }
 

@@ -14,6 +14,7 @@ use wcmf\lib\model\mapper\RDBManyToManyRelationDescription;
 use wcmf\lib\model\mapper\RDBManyToOneRelationDescription;
 use wcmf\lib\model\mapper\RDBOneToManyRelationDescription;
 use wcmf\lib\persistence\ReferenceDescription;
+use wcmf\lib\persistence\TransientAttributeDescription;
 use wcmf\lib\persistence\ObjectId;
 
 /**
@@ -122,15 +123,19 @@ class RatingRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'id' => new RDBAttributeDescription('id', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Rating', 'id'),
+      'id' => new RDBAttributeDescription('id', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Rating', 'id'),
      /**
       *
       */
-      'fk_location_id' => new RDBAttributeDescription('fk_location_id', '', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Rating', 'fk_location_id'),
+      'fk_location_id' => new RDBAttributeDescription('fk_location_id', 'Integer', ['DATATYPE_IGNORE'], null, '', '', false, 'text', 'text', 'Rating', 'fk_location_id'),
      /**
       *
       */
       'value' => new RDBAttributeDescription('value', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"config","section":"rating"}}', 'text', 'Rating', 'value'),
+     /**
+      *
+      */
+      '' => new TransientAttributeDescription('', 'Location'),
      /**
       *
       */

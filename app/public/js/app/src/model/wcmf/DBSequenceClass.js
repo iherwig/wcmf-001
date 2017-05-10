@@ -26,7 +26,7 @@ define([
 
         attributes: [{
             name: "table",
-            type: "String",
+            type: "Integer",
             description: "",
             isEditable: false,
             inputType: "text",
