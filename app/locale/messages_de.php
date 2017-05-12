@@ -21,10 +21,10 @@ $messages_de['<em>%0%</em> was successfully unlinked'] = '<em>%0%</em> wurde erf
 $messages_de['<em>%0%</em> was successfully unlocked'] = '<em>%0%</em> wurde erfolgreich entsperrt';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js
 $messages_de['<em>%0%</em> was successfully updated'] = '<em>%0%</em> wurde erfolgreich aktualisiert';
-// file(s): src/model/wcmf/_base/PermissionRDBMapper.php
-$messages_de['action'] = 'Aktion';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_de['Action'] = 'Aktion';
+// file(s): src/model/wcmf/_base/PermissionRDBMapper.php
+$messages_de['action'] = 'Aktion';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_de['Active'] = 'Aktiv';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
@@ -55,10 +55,10 @@ $messages_de['Backend error'] = 'Backend-Fehler';
 $messages_de['Cancel'] = 'Abbrechen';
 // file(s): lib/io/FileUtil.php
 $messages_de['Cannot copy %0% (it\'s neither a file nor a directory).'] = '%0% kann nicht kopiert werden (keine Datei und kein Verzeichnis).';
-// file(s): src/model/_base/LocationRDBMapper.php
-$messages_de['category'] = 'Kategorie';
 // file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_de['Category'] = 'Kategorie';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_de['category'] = 'Kategorie';
 // file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_de['Category [Pl.]'] = 'Kategorien';
 // file(s): public/js/action/Link.js
@@ -287,6 +287,8 @@ $messages_de['Possible file upload attack: filename %0%.'] = 'Möglicher Datei U
 $messages_de['Processed rows'] = 'Verarbeitete Zeilen';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_de['Rating'] = 'Bewertung';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_de['rating'] = 'Bewertung';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_de['Rating [Pl.]'] = 'Bewertungen';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
@@ -297,10 +299,10 @@ $messages_de['resource'] = 'Resource';
 $messages_de['Results for \'%0%\''] = 'Ergebnisse für \'%0%\'';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php
 $messages_de['Role'] = 'Rolle';
-// file(s): src/model/wcmf/_base/PermissionRDBMapper.php
-$messages_de['roles'] = 'Rollen';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_de['Roles'] = 'Rollen';
+// file(s): src/model/wcmf/_base/PermissionRDBMapper.php
+$messages_de['roles'] = 'Rollen';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php
 $messages_de['Role [Pl.]'] = 'Rollen';
 // file(s): public/js/ui/admin/widget/template/PrincipalFormWidget.html, public/js/ui/data/widget/PermissionDlgWidget.js, public/js/ui/data/widget/template/EntityFormWidget.html, public/js/ui/settings/template/SettingsPage.html
@@ -435,10 +437,10 @@ $messages_de['Update'] = 'Ändern';
 $messages_de['Updated objects'] = 'Aktualisierte Objekte';
 // file(s): application/controller/SaveController.php
 $messages_de['Upload failed for %0%.'] = 'Upload fehlgeschlagen für %0%.';
-// file(s): src/model/_base/LocationRDBMapper.php
-$messages_de['user'] = 'Bearbeiter';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
 $messages_de['User'] = 'Benutzer';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_de['user'] = 'Bearbeiter';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
 $messages_de['UserConfig'] = 'Benutzerkonfiguration';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
