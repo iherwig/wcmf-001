@@ -86,7 +86,7 @@ function(
             this.setText(this.value);
         },
 
-        startup: function() {
+        startup: function(){
             this.inherited(arguments);
             this.own(
                 on(this.dropDownMenu, "open", lang.hitch(this, function() {

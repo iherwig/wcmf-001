@@ -35,8 +35,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "login",
             type: "String",
@@ -48,8 +47,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "password",
             type: "String",
@@ -61,8 +59,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "name",
             type: "String",
@@ -74,8 +71,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "firstname",
             type: "String",
@@ -87,8 +83,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "active",
             type: "Integer",
@@ -100,8 +95,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: 1,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "super_user",
             type: "Integer",
@@ -113,8 +107,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: 0,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "config",
             type: "String",
@@ -126,8 +119,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }],
 
         relations: [{

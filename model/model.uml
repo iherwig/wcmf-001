@@ -2067,10 +2067,6 @@
               <packagedElement xmi:type="uml:Class" xmi:id="_ISXYoC9aEeeAOsdIWnGkQQ" name="Rating">
                 <generalization xmi:type="uml:Generalization" xmi:id="_ISXYoS9aEeeAOsdIWnGkQQ" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_ISXYoi9aEeeAOsdIWnGkQQ" name="value" type="_agg3ALQwEeOLlbB2YLI0iw"/>
-                <ownedAttribute xmi:type="uml:Property" xmi:id="_ISXYoy9aEeeAOsdIWnGkQQ" type="_BMnDwLU2EeORdpT3S9OOtw">
-                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ISXYpC9aEeeAOsdIWnGkQQ"/>
-                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ISXYpS9aEeeAOsdIWnGkQQ" value="*"/>
-                </ownedAttribute>
               </packagedElement>
               <packagedElement xmi:type="uml:Association" xmi:id="_TKCs0C9aEeeAOsdIWnGkQQ" memberEnd="_TKFJEC9aEeeAOsdIWnGkQQ _TKG-QC9aEeeAOsdIWnGkQQ" navigableOwnedEnd="_TKFJEC9aEeeAOsdIWnGkQQ _TKG-QC9aEeeAOsdIWnGkQQ">
                 <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TKEiAC9aEeeAOsdIWnGkQQ" source="org.eclipse.papyrus">

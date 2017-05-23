@@ -52,7 +52,6 @@ class RatingRDBMapper extends NodeUnifiedRDBMapper {
       elseif ($name == 'id') { $displayName = $message->getText("id"); }
       elseif ($name == 'fk_location_id') { $displayName = $message->getText("fk_location_id"); }
       elseif ($name == 'value') { $displayName = $message->getText("value"); }
-      elseif ($name == '') { $displayName = $message->getText(""); }
       elseif ($name == 'created') { $displayName = $message->getText("created"); }
       elseif ($name == 'creator') { $displayName = $message->getText("creator"); }
       elseif ($name == 'modified') { $displayName = $message->getText("modified"); }
@@ -69,7 +68,6 @@ class RatingRDBMapper extends NodeUnifiedRDBMapper {
       elseif ($name == 'id') { $description = $message->getText(""); }
       elseif ($name == 'fk_location_id') { $description = $message->getText(""); }
       elseif ($name == 'value') { $description = $message->getText(""); }
-      elseif ($name == '') { $description = $message->getText(""); }
       elseif ($name == 'created') { $description = $message->getText(""); }
       elseif ($name == 'creator') { $description = $message->getText(""); }
       elseif ($name == 'modified') { $description = $message->getText(""); }
@@ -134,10 +132,6 @@ class RatingRDBMapper extends NodeUnifiedRDBMapper {
       *
       */
       'value' => new RDBAttributeDescription('value', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"config","section":"rating"}}', 'text', 'Rating', 'value'),
-     /**
-      *
-      */
-      '' => new TransientAttributeDescription('', 'Location'),
      /**
       *
       */

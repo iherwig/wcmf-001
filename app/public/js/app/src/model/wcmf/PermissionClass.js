@@ -35,8 +35,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "resource",
             type: "String",
@@ -48,8 +47,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "context",
             type: "String",
@@ -61,8 +59,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "action",
             type: "String",
@@ -74,8 +71,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "roles",
             type: "String",
@@ -87,8 +83,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }],
 
         relations: []

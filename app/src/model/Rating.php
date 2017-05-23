@@ -7,6 +7,10 @@ namespace app\src\model;
 
 use app\src\model\_base\RatingBase;
 // PROTECTED REGION ID(app/src/model/Rating.php/Import) ENABLED START
+use wcmf\lib\core\ObjectFactory;
+use wcmf\lib\persistence\BuildDepth;
+use wcmf\lib\persistence\Criteria;
+use wcmf\lib\validation\ValidationException;
 // PROTECTED REGION END
 
 /**
@@ -15,7 +19,6 @@ use app\src\model\_base\RatingBase;
  * @var id
  * @var fk_location_id
  * @var value (String)
- * @var  (Location)
  * @var created (Date)
  * @var creator (String)
  * @var modified (Date)
@@ -24,13 +27,30 @@ use app\src\model\_base\RatingBase;
  */
 class Rating extends RatingBase {
 // PROTECTED REGION ID(app/src/model/Rating.php/Body) ENABLED START
-// PROTECTED REGION END
   /**
-   * Rating::getnull()
-   * @return Location
+   * @see PersistentObject::beforeUpdate()
    */
-  public function getnull() {
-// PROTECTED REGION ID(app/src/model/Rating.php/Methods/getnull) ENABLED START
-// PROTECTED REGION END
+  public function beforeUpdate() {
+    parent::beforeUpdate();
+
+    // check if the user rated the same location already
+    $location = $this->getValue('Location');
+    if ($location) {
+      $session = ObjectFactory::getInstance('session');
+      $authUserLogin = $session->getAuthUser();
+      $userRating = ObjectFactory::getInstance('persistenceFacade')->loadFirstObject(
+          'Rating', BuildDepth::SINGLE, [
+              new Criteria('Rating', 'creator', '=', $authUserLogin),
+              new Criteria('Rating', 'fk_location_id', '=', $location->getValue('id'))
+          ]
+      );
+      if ($userRating) {
+        $message = ObjectFactory::getInstance('message');
+        throw new ValidationException($message->getText('value'), $this->getValue('value'),
+                $message->getText('A location can be rated only once per user')
+        );
+      }
+    }
   }
+// PROTECTED REGION END
 }

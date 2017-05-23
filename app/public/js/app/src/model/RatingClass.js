@@ -35,8 +35,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "fk_location_id",
             type: "Integer",
@@ -48,8 +47,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "value",
             type: "String",
@@ -61,13 +59,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
-        }, {
-            name: "",
-            type: "Location",
-            isReference: false,
-            isTransient: true
+            isReference: false
         }, {
             name: "created",
             type: "Date",
@@ -79,8 +71,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "creator",
             type: "String",
@@ -92,8 +83,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "modified",
             type: "Date",
@@ -105,8 +95,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "last_editor",
             type: "String",
@@ -118,8 +107,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }],
 
         relations: [{
