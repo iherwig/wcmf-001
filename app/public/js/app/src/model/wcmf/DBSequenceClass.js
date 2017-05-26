@@ -35,7 +35,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "id",
             type: "Integer",
@@ -47,7 +48,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }],
 
         relations: []

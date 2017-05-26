@@ -31,6 +31,7 @@ use app\src\model\_base\LocationBase;
  */
 class Location extends LocationBase {
 // PROTECTED REGION ID(app/src/model/Location.php/Body) ENABLED START
+  private $rating = -1;
 // PROTECTED REGION END
   /**
    * Location::getRating()
@@ -38,6 +39,18 @@ class Location extends LocationBase {
    */
   public function getRating() {
 // PROTECTED REGION ID(app/src/model/Location.php/Methods/getRating) ENABLED START
+    if ($this->rating == -1) {
+      // load attached ratings
+      $this->loadChildren('Rating');
+      $ratingSum = 0;
+      $numRatings = 0;
+      foreach ($this->getValue('Rating') as $rating) {
+        $ratingSum += $rating->getValue('value');
+        $numRatings++;
+      }
+      $this->rating = $ratingSum / $numRatings;
+    }
+    return $this->rating;
 // PROTECTED REGION END
   }
 }

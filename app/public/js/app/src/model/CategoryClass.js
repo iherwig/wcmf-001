@@ -35,7 +35,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "name",
             type: "String",
@@ -47,7 +48,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "icon",
             type: "String",
@@ -59,7 +61,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "color",
             type: "String",
@@ -71,7 +74,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "created",
             type: "Date",
@@ -83,7 +87,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "creator",
             type: "String",
@@ -95,7 +100,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "modified",
             type: "Date",
@@ -107,7 +113,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "last_editor",
             type: "String",
@@ -119,7 +126,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }],
 
         relations: [{
