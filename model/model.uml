@@ -1702,16 +1702,16 @@
               </packagedElement>
               <packagedElement xmi:type="uml:Class" xmi:id="_Wf53EDCnEeezbITIq6j96g" name="Rating">
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_Wf53ETCnEeezbITIq6j96g" name="1" type="_agg3ALQwEeOLlbB2YLI0iw">
-                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53EjCnEeezbITIq6j96g" value="★"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53EjCnEeezbITIq6j96g" value="★☆☆☆☆"/>
                 </ownedAttribute>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_Wf53EzCnEeezbITIq6j96g" name="2" type="_agg3ALQwEeOLlbB2YLI0iw">
-                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53FDCnEeezbITIq6j96g" value="★★"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53FDCnEeezbITIq6j96g" value="★★☆☆☆"/>
                 </ownedAttribute>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_Wf53FTCnEeezbITIq6j96g" name="3" type="_agg3ALQwEeOLlbB2YLI0iw">
-                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53FjCnEeezbITIq6j96g" value="★★★"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_Wf53FjCnEeezbITIq6j96g" value="★★★☆☆"/>
                 </ownedAttribute>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_kodtMDCnEeezbITIq6j96g" name="4" type="_agg3ALQwEeOLlbB2YLI0iw">
-                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_kodtMTCnEeezbITIq6j96g" value="★★★★"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_kodtMTCnEeezbITIq6j96g" value="★★★★☆"/>
                 </ownedAttribute>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_kqu-EDCnEeezbITIq6j96g" name="5" type="_agg3ALQwEeOLlbB2YLI0iw">
                   <defaultValue xmi:type="uml:LiteralString" xmi:id="_kqvlIDCnEeezbITIq6j96g" value="★★★★★"/>
@@ -2053,7 +2053,7 @@
               <packagedElement xmi:type="uml:Class" xmi:id="_BMnDwLU2EeORdpT3S9OOtw" name="Location">
                 <generalization xmi:type="uml:Generalization" xmi:id="_7JZAQLU5EeORdpT3S9OOtw" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_kq-u8LU4EeORdpT3S9OOtw" name="name" type="_agg3ALQwEeOLlbB2YLI0iw"/>
-                <ownedAttribute xmi:type="uml:Property" xmi:id="_SSUrIC_dEeeCKtxl1f5_Nw" name="user" type="_agg3ALQwEeOLlbB2YLI0iw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_SSUrIC_dEeeCKtxl1f5_Nw" name="user" type="_dbezULQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_k7roYC_cEeeCKtxl1f5_Nw" name="address" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_mUpaIDQ0EeevXLDJEeKv_w" name="website" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_njBmAPT-EeSdk57oe2HXMQ" name="notes" type="_agg3ALQwEeOLlbB2YLI0iw"/>

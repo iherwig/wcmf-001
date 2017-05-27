@@ -21,10 +21,10 @@ $messages_en['<em>%0%</em> was successfully unlinked'] = '';
 $messages_en['<em>%0%</em> was successfully unlocked'] = '';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js
 $messages_en['<em>%0%</em> was successfully updated'] = '';
-// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
-$messages_en['Action'] = '';
 // file(s): src/model/wcmf/_base/PermissionRDBMapper.php
 $messages_en['action'] = '';
+// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
+$messages_en['Action'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_en['Active'] = '';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
@@ -37,12 +37,14 @@ $messages_en['Administration'] = '';
 $messages_en['A language for which a translation of the model can be created. The code is arbitrary but it is recommended to use the ISO language codes (en, de, it, ...).'] = '';
 // file(s): public/js/ui/data/widget/PermissionDlgWidget.js
 $messages_en['allow'] = '';
+// file(s): src/model/Rating.php
+$messages_en['A location can be rated only once per user'] = '';
 // file(s): lib/presentation/ApplicationError.php
-$messages_en['An unspecified error occured.'] = '';
+$messages_en['An unspecified error occurred.'] = '';
 // file(s): lib/presentation/ApplicationError.php
-$messages_en['An unspecified fatal error occured.'] = '';
+$messages_en['An unspecified fatal error occurred.'] = '';
 // file(s): lib/presentation/ApplicationError.php
-$messages_en['An unspecified warning occured.'] = '';
+$messages_en['An unspecified warning occurred.'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_en['archived'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
@@ -177,10 +179,10 @@ $messages_en['Initialization'] = '';
 $messages_en['Inserted objects'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['Instances of this class are used to localize entity attributes. Each instance defines a translation of one attribute of one entity into one language.'] = '';
-// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
-$messages_en['language'] = '';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_en['Language'] = '';
+// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
+$messages_en['language'] = '';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_en['Language [Pl.]'] = 'Languages';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
@@ -287,8 +289,8 @@ $messages_en['Possible file upload attack: filename %0%.'] = '';
 $messages_en['Processed rows'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Rating'] = '';
-// file(s): src/model/_base/LocationRDBMapper.php
-$messages_en['rating'] = '';
+// file(s): src/model/Rating.php
+$messages_en['Ratings may be only updated by their creator'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Rating [Pl.]'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
@@ -453,7 +455,7 @@ $messages_en['Username'] = '';
 $messages_en['Users'] = '';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['User [Pl.]'] = 'Users';
-// file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): src/model/Rating.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['value'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_en['website'] = '';

@@ -21,10 +21,10 @@ $messages_de['<em>%0%</em> was successfully unlinked'] = '<em>%0%</em> wurde erf
 $messages_de['<em>%0%</em> was successfully unlocked'] = '<em>%0%</em> wurde erfolgreich entsperrt';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js
 $messages_de['<em>%0%</em> was successfully updated'] = '<em>%0%</em> wurde erfolgreich aktualisiert';
-// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
-$messages_de['Action'] = 'Aktion';
 // file(s): src/model/wcmf/_base/PermissionRDBMapper.php
 $messages_de['action'] = 'Aktion';
+// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
+$messages_de['Action'] = 'Aktion';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_de['Active'] = 'Aktiv';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
@@ -37,12 +37,14 @@ $messages_de['Administration'] = 'Administration';
 $messages_de['A language for which a translation of the model can be created. The code is arbitrary but it is recommended to use the ISO language codes (en, de, it, ...).'] = '';
 // file(s): public/js/ui/data/widget/PermissionDlgWidget.js
 $messages_de['allow'] = 'Erlaubt';
+// file(s): src/model/Rating.php
+$messages_de['A location can be rated only once per user'] = 'Ein Ort kann von einem Benutzer nur einmal bewertet werden';
 // file(s): lib/presentation/ApplicationError.php
-$messages_de['An unspecified error occured.'] = '';
+$messages_de['An unspecified error occurred.'] = '';
 // file(s): lib/presentation/ApplicationError.php
-$messages_de['An unspecified fatal error occured.'] = '';
+$messages_de['An unspecified fatal error occurred.'] = '';
 // file(s): lib/presentation/ApplicationError.php
-$messages_de['An unspecified warning occured.'] = '';
+$messages_de['An unspecified warning occurred.'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_de['archived'] = 'Archiviert';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
@@ -177,10 +179,10 @@ $messages_de['Initialization'] = 'Initialisierung';
 $messages_de['Inserted objects'] = 'Erstellte Objekte';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_de['Instances of this class are used to localize entity attributes. Each instance defines a translation of one attribute of one entity into one language.'] = '';
-// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
-$messages_de['language'] = 'Sprache';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_de['Language'] = 'Sprache';
+// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
+$messages_de['language'] = 'Sprache';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_de['Language [Pl.]'] = 'Sprachen';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
@@ -287,8 +289,8 @@ $messages_de['Possible file upload attack: filename %0%.'] = 'Möglicher Datei U
 $messages_de['Processed rows'] = 'Verarbeitete Zeilen';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_de['Rating'] = 'Bewertung';
-// file(s): src/model/_base/LocationRDBMapper.php
-$messages_de['rating'] = 'Bewertung';
+// file(s): src/model/Rating.php
+$messages_de['Ratings may be only updated by their creator'] = 'Bewertungen können nur vom Ersteller geändert werden';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_de['Rating [Pl.]'] = 'Bewertungen';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
@@ -453,7 +455,7 @@ $messages_de['Username'] = 'Benutzername';
 $messages_de['Users'] = 'Benutzer';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
 $messages_de['User [Pl.]'] = 'Benutzer';
-// file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): src/model/Rating.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_de['value'] = 'Wert';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_de['website'] = 'Website';

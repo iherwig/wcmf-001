@@ -35,8 +35,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "category",
             type: "Integer",
@@ -48,8 +47,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "name",
             type: "String",
@@ -61,11 +59,10 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "user",
-            type: "String",
+            type: "Integer",
             description: "",
             isEditable: true,
             inputType: "select:{\"list\":{\"type\":\"node\",\"types\":[\"User\"],\"emptyItem\":\"\"}}",
@@ -74,8 +71,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "address",
             type: "String",
@@ -87,8 +83,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "website",
             type: "String",
@@ -100,8 +95,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "notes",
             type: "String",
@@ -113,8 +107,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "archived",
             type: "Integer",
@@ -126,13 +119,11 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "rating",
             type: "Integer",
-            isReference: false,
-            isTransient: true
+            tags: ["DATATYPE_ATTRIBUTE"],
         }, {
             name: "created",
             type: "Date",
@@ -144,8 +135,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "creator",
             type: "String",
@@ -157,8 +147,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "modified",
             type: "Date",
@@ -170,8 +159,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }, {
             name: "last_editor",
             type: "String",
@@ -183,8 +171,7 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE", "GROUP_INTERNAL"],
             defaultValue: null,
-            isReference: false,
-            isTransient: false
+            isReference: false
         }],
 
         relations: [{

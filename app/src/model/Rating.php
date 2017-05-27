@@ -33,19 +33,28 @@ class Rating extends RatingBase {
   public function beforeUpdate() {
     parent::beforeUpdate();
 
+    $message = ObjectFactory::getInstance('message');
+
+    // check if the user is the creator
+    $session = ObjectFactory::getInstance('session');
+    $authUserLogin = $session->getAuthUser();
+    if ($authUserLogin != $this->getValue('creator')) {
+      throw new ValidationException($message->getText('value'), $this->getValue('value'),
+              $message->getText('Ratings may be only updated by their creator')
+      );
+    }
+
     // check if the user rated the same location already
     $location = $this->getValue('Location');
     if ($location) {
-      $session = ObjectFactory::getInstance('session');
-      $authUserLogin = $session->getAuthUser();
       $userRating = ObjectFactory::getInstance('persistenceFacade')->loadFirstObject(
           'Rating', BuildDepth::SINGLE, [
+              new Criteria('Rating', 'id', '!=', $this->getValue('id')),
               new Criteria('Rating', 'creator', '=', $authUserLogin),
               new Criteria('Rating', 'fk_location_id', '=', $location->getValue('id'))
           ]
       );
       if ($userRating) {
-        $message = ObjectFactory::getInstance('message');
         throw new ValidationException($message->getText('value'), $this->getValue('value'),
                 $message->getText('A location can be rated only once per user')
         );

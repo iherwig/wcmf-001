@@ -197,7 +197,7 @@ define([
                 this.markers = [];
                 var type = 'Location';
                 var store = Store.getStore(type, config.app.defaultLanguage);
-                store.setExtraParam('values', 'id,name,address,website,user');
+                store.setExtraParam('values', 'id,name,address,website,user,rating');
                 var filter = new store.Filter().eq(type+'.category', category.id).or(
                           new store.Filter().ne(type+'.archived', 1),
                           new store.Filter().eq(type+'.archived', null)
@@ -244,10 +244,20 @@ define([
                 icon: category.icon,
                 markerColor: location.user ? 'cadetblue' : 'blue'
             });
+            var ratingStr = '';
+            var rating = location.rating;
+            if (rating === parseFloat(rating)) {
+              for (var i=1; i<=5; i++) {
+                var star = rating >= i ? 'star' :
+                        (rating >= i-0.5 ? 'star-half-o' : 'star-o');
+                ratingStr += '<i class="fa fa-'+star+'" aria-hidden="true"></i>';
+              }
+            }
             var latLng = new L.LatLng(lat, lng);
             var marker = new L.Marker(latLng, {icon: icon});
             marker.bindPopup(
                     '<strong>'+location.name+'</strong><br>'+
+                    ratingStr+'<br>'+
                     location.address.replace(/\n/g, '<br>')+
                     (location.website ? '<br><a href="'+location.website+'" target="_blank">'+location.website+'</a>' : '')+
                     '<br><a href="'+this.getLocationUrl(location.id)+'">'+Dict.translate('Edit')+'</a>'
