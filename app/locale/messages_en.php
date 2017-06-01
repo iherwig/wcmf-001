@@ -25,10 +25,10 @@ $messages_en['<em>%0%</em> was successfully updated'] = '';
 $messages_en['action'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_en['Action'] = '';
-// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
-$messages_en['Active'] = '';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['active'] = '';
+// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
+$messages_en['Active'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_en['address'] = '';
 // file(s): public/js/ui/admin/template/AdminPage.html, public/js/ui/_include/widget/template/NavigationWidget.html
@@ -57,10 +57,10 @@ $messages_en['Backend error'] = '';
 $messages_en['Cancel'] = '';
 // file(s): lib/io/FileUtil.php
 $messages_en['Cannot copy %0% (it\'s neither a file nor a directory).'] = '';
-// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
-$messages_en['Category'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_en['category'] = '';
+// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
+$messages_en['Category'] = '';
 // file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_en['Category [Pl.]'] = '';
 // file(s): public/js/action/Link.js
@@ -179,10 +179,10 @@ $messages_en['Initialization'] = '';
 $messages_en['Inserted objects'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['Instances of this class are used to localize entity attributes. Each instance defines a translation of one attribute of one entity into one language.'] = '';
-// file(s): src/model/wcmf/_base/LanguageRDBMapper.php
-$messages_en['Language'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['language'] = '';
+// file(s): src/model/wcmf/_base/LanguageRDBMapper.php
+$messages_en['Language'] = '';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_en['Language [Pl.]'] = 'Languages';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
@@ -203,6 +203,10 @@ $messages_en['Location [Pl.]'] = '';
 $messages_en['Lock'] = '';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js
 $messages_en['Locking <em>%0%</em>'] = '';
+// file(s): public/js/ui/admin/LockListPage.js, public/js/ui/admin/LockPage.js
+$messages_en['Lock Management'] = '';
+// file(s): public/js/ui/_include/widget/template/NavigationWidget.html
+$messages_en['Locks'] = '';
 // file(s): src/model/wcmf/_base/LockRDBMapper.php
 $messages_en['Lock [Pl.]'] = 'Locks';
 // file(s): application/views/plugins/function.translate.php
@@ -287,6 +291,8 @@ $messages_en['Permission [Pl.]'] = 'Permissions';
 $messages_en['Possible file upload attack: filename %0%.'] = '';
 // file(s): public/js/ui/data/widget/EntityListWidget.js
 $messages_en['Processed rows'] = '';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_en['rating'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Rating'] = '';
 // file(s): src/model/Rating.php
@@ -301,10 +307,10 @@ $messages_en['resource'] = '';
 $messages_en['Results for \'%0%\''] = '';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php
 $messages_en['Role'] = '';
-// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
-$messages_en['Roles'] = '';
 // file(s): src/model/wcmf/_base/PermissionRDBMapper.php
 $messages_en['roles'] = '';
+// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
+$messages_en['Roles'] = '';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php
 $messages_en['Role [Pl.]'] = 'Roles';
 // file(s): public/js/ui/admin/widget/template/PrincipalFormWidget.html, public/js/ui/data/widget/PermissionDlgWidget.js, public/js/ui/data/widget/template/EntityFormWidget.html, public/js/ui/settings/template/SettingsPage.html
@@ -426,9 +432,9 @@ $messages_en['The user requires a login name'] = '';
 // file(s): lib/persistence/impl/DefaultPersistentObject.php, lib/presentation/impl/AbstractControllerMessage.php
 $messages_en['The value of \'%0%\' (%1%) is invalid.'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
-$messages_en['translation'] = '';
-// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['Translation'] = '';
+// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
+$messages_en['translation'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['Translation [Pl.]'] = 'Translations';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js
@@ -439,10 +445,10 @@ $messages_en['Update'] = '';
 $messages_en['Updated objects'] = '';
 // file(s): application/controller/SaveController.php
 $messages_en['Upload failed for %0%.'] = '';
-// file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
-$messages_en['User'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_en['user'] = '';
+// file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
+$messages_en['User'] = '';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['UserConfig'] = '';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php

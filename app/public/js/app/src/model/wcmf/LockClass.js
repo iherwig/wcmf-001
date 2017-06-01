@@ -35,7 +35,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "objectid",
             type: "String",
@@ -47,7 +48,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "login",
             type: "String",
@@ -59,7 +61,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "created",
             type: "Date",
@@ -71,7 +74,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }],
 
         relations: []

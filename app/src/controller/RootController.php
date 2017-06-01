@@ -90,12 +90,11 @@ class RootController extends RootControllerBase {
       $roleType = '';
     }
 
-    if ($configuration->hasValue('permissionType', 'defaultPermissionManager')) {
-      $permissionType = $configuration->getValue('permissionType', 'defaultPermissionManager');
-    }
-    else {
-      $permissionType = '';
-    }
+    $permissionType = $configuration->hasValue('permissionType', 'defaultPermissionManager') ?
+        $configuration->getValue('permissionType', 'defaultPermissionManager') : '';
+
+    $lockType = $configuration->hasValue('lockType', 'lockHandler') ?
+        $configuration->getValue('lockType', 'lockHandler') : '';
 
     // validate config
     if (!is_array($rootTypes) || sizeof($rootTypes) == 0) {
@@ -148,6 +147,7 @@ class RootController extends RootControllerBase {
       'userType' => $userType,
       'roleType' => $roleType,
       'permissionType' => $permissionType,
+      'lockType' => $lockType,
       'mapAccessToken' => $configuration->getValue('accessToken', 'map')
     ];
 

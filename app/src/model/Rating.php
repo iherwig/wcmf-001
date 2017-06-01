@@ -35,16 +35,9 @@ class Rating extends RatingBase {
 
     $message = ObjectFactory::getInstance('message');
 
-    // check if the user is the creator
+    // check if the user rated the same location already
     $session = ObjectFactory::getInstance('session');
     $authUserLogin = $session->getAuthUser();
-    if ($authUserLogin != $this->getValue('creator')) {
-      throw new ValidationException($message->getText('value'), $this->getValue('value'),
-              $message->getText('Ratings may be only updated by their creator')
-      );
-    }
-
-    // check if the user rated the same location already
     $location = $this->getValue('Location');
     if ($location) {
       $userRating = ObjectFactory::getInstance('persistenceFacade')->loadFirstObject(

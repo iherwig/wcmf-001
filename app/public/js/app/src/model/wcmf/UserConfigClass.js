@@ -35,7 +35,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "fk_user_id",
             type: "Integer",
@@ -47,7 +48,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_IGNORE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "name",
             type: "String",
@@ -59,7 +61,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }, {
             name: "value",
             type: "String",
@@ -71,7 +74,8 @@ define([
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],
             defaultValue: null,
-            isReference: false
+            isReference: false,
+            isTransient: false
         }],
 
         relations: [{

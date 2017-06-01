@@ -25,10 +25,10 @@ $messages_de['<em>%0%</em> was successfully updated'] = '<em>%0%</em> wurde erfo
 $messages_de['action'] = 'Aktion';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_de['Action'] = 'Aktion';
-// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
-$messages_de['Active'] = 'Aktiv';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
 $messages_de['active'] = 'Aktiv';
+// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
+$messages_de['Active'] = 'Aktiv';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_de['address'] = 'Adresse';
 // file(s): public/js/ui/admin/template/AdminPage.html, public/js/ui/_include/widget/template/NavigationWidget.html
@@ -40,11 +40,11 @@ $messages_de['allow'] = 'Erlaubt';
 // file(s): src/model/Rating.php
 $messages_de['A location can be rated only once per user'] = 'Ein Ort kann von einem Benutzer nur einmal bewertet werden';
 // file(s): lib/presentation/ApplicationError.php
-$messages_de['An unspecified error occurred.'] = '';
+$messages_de['An unspecified error occurred.'] = 'Es ist ein Fehler aufgetreten.';
 // file(s): lib/presentation/ApplicationError.php
-$messages_de['An unspecified fatal error occurred.'] = '';
+$messages_de['An unspecified fatal error occurred.'] = 'Es ist ein schwerer Fehler aufgetreten.';
 // file(s): lib/presentation/ApplicationError.php
-$messages_de['An unspecified warning occurred.'] = '';
+$messages_de['An unspecified warning occurred.'] = 'Es ist eine Warnung aufgetreten.';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_de['archived'] = 'Archiviert';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
@@ -57,10 +57,10 @@ $messages_de['Backend error'] = 'Backend-Fehler';
 $messages_de['Cancel'] = 'Abbrechen';
 // file(s): lib/io/FileUtil.php
 $messages_de['Cannot copy %0% (it\'s neither a file nor a directory).'] = '%0% kann nicht kopiert werden (keine Datei und kein Verzeichnis).';
-// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
-$messages_de['Category'] = 'Kategorie';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_de['category'] = 'Kategorie';
+// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
+$messages_de['Category'] = 'Kategorie';
 // file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_de['Category [Pl.]'] = 'Kategorien';
 // file(s): public/js/action/Link.js
@@ -179,10 +179,10 @@ $messages_de['Initialization'] = 'Initialisierung';
 $messages_de['Inserted objects'] = 'Erstellte Objekte';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_de['Instances of this class are used to localize entity attributes. Each instance defines a translation of one attribute of one entity into one language.'] = '';
-// file(s): src/model/wcmf/_base/LanguageRDBMapper.php
-$messages_de['Language'] = 'Sprache';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_de['language'] = 'Sprache';
+// file(s): src/model/wcmf/_base/LanguageRDBMapper.php
+$messages_de['Language'] = 'Sprache';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_de['Language [Pl.]'] = 'Sprachen';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
@@ -203,6 +203,10 @@ $messages_de['Location [Pl.]'] = 'Orte';
 $messages_de['Lock'] = 'Sperre';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js
 $messages_de['Locking <em>%0%</em>'] = 'Sperre <em>%0%</em>';
+// file(s): public/js/ui/admin/LockListPage.js, public/js/ui/admin/LockPage.js
+$messages_de['Lock Management'] = 'Sperrmanagement';
+// file(s): public/js/ui/_include/widget/template/NavigationWidget.html
+$messages_de['Locks'] = 'Sperren';
 // file(s): src/model/wcmf/_base/LockRDBMapper.php
 $messages_de['Lock [Pl.]'] = 'Sperren';
 // file(s): application/views/plugins/function.translate.php
@@ -287,6 +291,8 @@ $messages_de['Permission [Pl.]'] = 'Rechte';
 $messages_de['Possible file upload attack: filename %0%.'] = 'Möglicher Datei Upload Angriff: filename %0%.';
 // file(s): public/js/ui/data/widget/EntityListWidget.js
 $messages_de['Processed rows'] = 'Verarbeitete Zeilen';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_de['rating'] = 'Bewertung';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_de['Rating'] = 'Bewertung';
 // file(s): src/model/Rating.php
@@ -301,10 +307,10 @@ $messages_de['resource'] = 'Resource';
 $messages_de['Results for \'%0%\''] = 'Ergebnisse für \'%0%\'';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php
 $messages_de['Role'] = 'Rolle';
-// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
-$messages_de['Roles'] = 'Rollen';
 // file(s): src/model/wcmf/_base/PermissionRDBMapper.php
 $messages_de['roles'] = 'Rollen';
+// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
+$messages_de['Roles'] = 'Rollen';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php
 $messages_de['Role [Pl.]'] = 'Rollen';
 // file(s): public/js/ui/admin/widget/template/PrincipalFormWidget.html, public/js/ui/data/widget/PermissionDlgWidget.js, public/js/ui/data/widget/template/EntityFormWidget.html, public/js/ui/settings/template/SettingsPage.html
@@ -426,9 +432,9 @@ $messages_de['The user requires a login name'] = 'Der Benutzername muss angegebe
 // file(s): lib/persistence/impl/DefaultPersistentObject.php, lib/presentation/impl/AbstractControllerMessage.php
 $messages_de['The value of \'%0%\' (%1%) is invalid.'] = 'Der Wert von \'%0%\' (%1%) ist ungültig.';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
-$messages_de['translation'] = 'Übersetzung';
-// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_de['Translation'] = 'Übersetzung';
+// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
+$messages_de['translation'] = 'Übersetzung';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_de['Translation [Pl.]'] = 'Übersetzungen';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js
@@ -439,10 +445,10 @@ $messages_de['Update'] = 'Ändern';
 $messages_de['Updated objects'] = 'Aktualisierte Objekte';
 // file(s): application/controller/SaveController.php
 $messages_de['Upload failed for %0%.'] = 'Upload fehlgeschlagen für %0%.';
-// file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
-$messages_de['User'] = 'Benutzer';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_de['user'] = 'Bearbeiter';
+// file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
+$messages_de['User'] = 'Benutzer';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
 $messages_de['UserConfig'] = 'Benutzerkonfiguration';
 // file(s): src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php

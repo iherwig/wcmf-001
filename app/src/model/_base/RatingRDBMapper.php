@@ -88,7 +88,7 @@ class RatingRDBMapper extends NodeUnifiedRDBMapper {
   public function getProperties() {
     return [
       'isSearchable' => true,
-      'displayValues' => ['value'],
+      'displayValues' => ['value', 'creator'],
 // PROTECTED REGION ID(app/src/model/_base/RatingRDBMapper.php/Properties) ENABLED START
 // PROTECTED REGION END
     ];
