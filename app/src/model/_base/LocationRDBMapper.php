@@ -56,6 +56,7 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       elseif ($name == 'address') { $displayName = $message->getText("address"); }
       elseif ($name == 'website') { $displayName = $message->getText("website"); }
       elseif ($name == 'notes') { $displayName = $message->getText("notes"); }
+      elseif ($name == 'color') { $displayName = $message->getText("color"); }
       elseif ($name == 'archived') { $displayName = $message->getText("archived"); }
       elseif ($name == 'rating') { $displayName = $message->getText("rating"); }
       elseif ($name == 'created') { $displayName = $message->getText("created"); }
@@ -78,6 +79,7 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       elseif ($name == 'address') { $description = $message->getText(""); }
       elseif ($name == 'website') { $description = $message->getText(""); }
       elseif ($name == 'notes') { $description = $message->getText(""); }
+      elseif ($name == 'color') { $description = $message->getText(""); }
       elseif ($name == 'archived') { $description = $message->getText(""); }
       elseif ($name == 'rating') { $description = $message->getText(""); }
       elseif ($name == 'created') { $description = $message->getText(""); }
@@ -169,6 +171,10 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       *
       */
       'notes' => new RDBAttributeDescription('notes', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'ckeditor:{"toolbarSet":"wcmf"}', 'text', 'Location', 'notes'),
+     /**
+      *
+      */
+      'color' => new RDBAttributeDescription('color', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"config","section":"MarkerColor","emptyItem":""}}', 'text', 'Location', 'color'),
      /**
       *
       */

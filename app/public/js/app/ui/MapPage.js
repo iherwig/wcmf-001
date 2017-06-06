@@ -124,7 +124,7 @@ define([
 
                 // set location markers
                 var categoryStore = Store.getStore('Category', config.app.defaultLanguage);
-                categoryStore.setExtraParam('values', 'id,name,icon');
+                categoryStore.setExtraParam('values', 'id,name,icon,color');
                 categoryStore.fetch().then(lang.hitch(this, function(items) {
                     for (var i=0, count=items.length; i<count; i++) {
                         var item = items[i];
@@ -197,7 +197,7 @@ define([
                 this.markers = [];
                 var type = 'Location';
                 var store = Store.getStore(type, config.app.defaultLanguage);
-                store.setExtraParam('values', 'id,name,address,website,user,rating');
+                store.setExtraParam('values', 'id,name,address,website,user,rating,color');
                 var filter = new store.Filter().eq(type+'.category', category.id).or(
                           new store.Filter().ne(type+'.archived', 1),
                           new store.Filter().eq(type+'.archived', null)
@@ -242,7 +242,7 @@ define([
             var icon = L.AwesomeMarkers.icon({
                 prefix: 'fa',
                 icon: category.icon,
-                markerColor: location.user ? 'cadetblue' : 'blue'
+                markerColor: location.color ? location.color : category.color ? category.color : 'white'
             });
             var ratingStr = '';
             var rating = location.rating;

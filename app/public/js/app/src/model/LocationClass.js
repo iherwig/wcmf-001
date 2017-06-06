@@ -116,6 +116,19 @@ define([
             isReference: false,
             isTransient: false
         }, {
+            name: "color",
+            type: "String",
+            description: "",
+            isEditable: true,
+            inputType: "select:{\"list\":{\"type\":\"config\",\"section\":\"MarkerColor\",\"emptyItem\":\"\"}}",
+            displayType: "text",
+            validateType: "",
+            validateDesc: "",
+            tags: ["DATATYPE_ATTRIBUTE"],
+            defaultValue: null,
+            isReference: false,
+            isTransient: false
+        }, {
             name: "archived",
             type: "Integer",
             description: "",

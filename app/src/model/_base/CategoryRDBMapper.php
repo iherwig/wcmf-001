@@ -137,7 +137,7 @@ class CategoryRDBMapper extends NodeUnifiedRDBMapper {
      /**
       *
       */
-      'color' => new RDBAttributeDescription('color', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'color', 'color', 'Category', 'color'),
+      'color' => new RDBAttributeDescription('color', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"config","section":"MarkerColor","emptyItem":""}}', 'text', 'Category', 'color'),
      /**
       *
       */

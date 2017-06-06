@@ -1745,6 +1745,65 @@
                   <defaultValue xmi:type="uml:LiteralString" xmi:id="_h1T2AUbVEeew5c2iU1w9bQ" value="+creator"/>
                 </ownedAttribute>
               </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_HLBr8ErLEee0XJZnYiatUw" name="MarkerColor">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_HLCTAErLEee0XJZnYiatUw" name="red" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_HLCTAUrLEee0XJZnYiatUw" value="red"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_HLCTAkrLEee0XJZnYiatUw" name="darkred" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_HLCTA0rLEee0XJZnYiatUw" value="darkred"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_HLCTBErLEee0XJZnYiatUw" name="lightred" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_HLCTBUrLEee0XJZnYiatUw" value="lightred"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_HLCTBkrLEee0XJZnYiatUw" name="orange" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_HLCTB0rLEee0XJZnYiatUw" value="orange"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_HLCTCErLEee0XJZnYiatUw" name="beige" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_HLCTCUrLEee0XJZnYiatUw" value="beige"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_dylHoErLEee0XJZnYiatUw" name="green" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_dylHoUrLEee0XJZnYiatUw" value="green"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_d0nvAErLEee0XJZnYiatUw" name="darkgreen" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_d0nvAUrLEee0XJZnYiatUw" value="darkgreen"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_d3EmEErLEee0XJZnYiatUw" name="lightgreen" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_d3EmEUrLEee0XJZnYiatUw" value="lightgreen"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_d5H0gErLEee0XJZnYiatUw" name="blue" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_d5H0gUrLEee0XJZnYiatUw" value="blue"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_d7E8UErLEee0XJZnYiatUw" name="darkblue" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_d7E8UUrLEee0XJZnYiatUw" value="darkblue"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_d8zaoErLEee0XJZnYiatUw" name="lightblue" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_d8zaoUrLEee0XJZnYiatUw" value="lightblue"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_d-sRAErLEee0XJZnYiatUw" name="purple" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_d-sRAUrLEee0XJZnYiatUw" value="purple"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_pEhV8ErLEee0XJZnYiatUw" name="darkpurple" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_pEhV8UrLEee0XJZnYiatUw" value="darkpurple"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_pHWAcErLEee0XJZnYiatUw" name="pink" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_pHWAcUrLEee0XJZnYiatUw" value="pink"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_pKT04ErLEee0XJZnYiatUw" name="cadetblue" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_pKT04UrLEee0XJZnYiatUw" value="cadetblue"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_pM8SIErLEee0XJZnYiatUw" name="white" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_pM8SIUrLEee0XJZnYiatUw" value="white"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_pPX7EErLEee0XJZnYiatUw" name="gray" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_pPX7EUrLEee0XJZnYiatUw" value="gray"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_pRtdYErLEee0XJZnYiatUw" name="lightgray" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_pRtdYUrLEee0XJZnYiatUw" value="lightgray"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_pUE04ErLEee0XJZnYiatUw" name="black" type="_agg3ALQwEeOLlbB2YLI0iw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_pUE04UrLEee0XJZnYiatUw" value="black"/>
+                </ownedAttribute>
+              </packagedElement>
             </packagedElement>
             <packagedElement xmi:type="uml:Package" xmi:id="_0wslELQWEeOIMOFxCilDfw" name="server.ini">
               <packagedElement xmi:type="uml:Class" xmi:id="_GPP80KvxEeaQUopA1XIUeQ" name="Application">
@@ -2071,7 +2130,7 @@
                 <generalization xmi:type="uml:Generalization" xmi:id="_TyMXcLU5EeORdpT3S9OOtw" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_UsqjALU2EeORdpT3S9OOtw" name="name" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_YRqoYDQEEeehUPMpNnhF3Q" name="icon" type="_agg3ALQwEeOLlbB2YLI0iw"/>
-                <ownedAttribute xmi:type="uml:Property" xmi:id="_iR8wkC_dEeeCKtxl1f5_Nw" name="color" type="_agg3ALQwEeOLlbB2YLI0iw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_NOHk4ErNEee0XJZnYiatUw" name="color" type="_agg3ALQwEeOLlbB2YLI0iw"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Class" xmi:id="_BMnDwLU2EeORdpT3S9OOtw" name="Location">
                 <generalization xmi:type="uml:Generalization" xmi:id="_7JZAQLU5EeORdpT3S9OOtw" general="_ylwfELQ4EeOQ5oJFa1i8cg"/>
@@ -2080,6 +2139,7 @@
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_k7roYC_cEeeCKtxl1f5_Nw" name="address" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_mUpaIDQ0EeevXLDJEeKv_w" name="website" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_njBmAPT-EeSdk57oe2HXMQ" name="notes" type="_agg3ALQwEeOLlbB2YLI0iw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_MYTbYErGEeeIG7s1fiut9w" name="color" type="_agg3ALQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_iy1AkDQxEeevXLDJEeKv_w" name="archived" type="_dbezULQwEeOLlbB2YLI0iw"/>
                 <ownedAttribute xmi:type="uml:Property" xmi:id="_XvRSkDWcEee8dos4GEyIug" name="rating" type="_dbezULQwEeOLlbB2YLI0iw"/>
               </packagedElement>
@@ -2247,7 +2307,6 @@
   <Chronos:ChiValue xmi:id="_ISZ04C9aEeeAOsdIWnGkQQ" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;config&quot;,&quot;section&quot;:&quot;rating&quot;}}" column_name="" base_Property="_ISXYoi9aEeeAOsdIWnGkQQ"/>
   <Chronos:ChiValue xmi:id="_k_rXkC_cEeeCKtxl1f5_Nw" is_editable="true" input_type="textarea" base_Property="_k7roYC_cEeeCKtxl1f5_Nw"/>
   <Chronos:ChiValue xmi:id="_SSYVgC_dEeeCKtxl1f5_Nw" db_data_type="INT(1)" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;node&quot;,&quot;types&quot;:[&quot;User&quot;],&quot;emptyItem&quot;:&quot;&quot;}}" column_name="" base_Property="_SSUrIC_dEeeCKtxl1f5_Nw"/>
-  <Chronos:ChiValue xmi:id="_iR-lwC_dEeeCKtxl1f5_Nw" is_editable="true" input_type="color" display_type="color" base_Property="_iR8wkC_dEeeCKtxl1f5_Nw"/>
   <Chronos:ChiSystem xmi:id="_PdL3wC_iEeeCKtxl1f5_Nw" plattform="wcmf" config="backend.ini" base_Class="_Evc_MC_hEeeCKtxl1f5_Nw"/>
   <Chronos:ChiSystem xmi:id="_QS9pMC_iEeeCKtxl1f5_Nw" plattform="wcmf" config="backend.ini" base_Class="_EvdmQC_hEeeCKtxl1f5_Nw"/>
   <Chronos:ChiSystem xmi:id="_vuSLIC_jEeeCKtxl1f5_Nw" plattform="wcmf" config="backend.ini" base_Class="_sj4EoC_jEeeCKtxl1f5_Nw"/>
@@ -2407,4 +2466,7 @@
   <Chronos:ChiSystem xmi:id="_874MwKprEeaGbp23C_zkpg" plattform="wcmf" config="persistence.ini" base_Class="_861D-KprEeaGbp23C_zkpg"/>
   <Chronos:ChiActionKey xmi:id="__zqVAC37EeeXlbGiPETVvw" action="importCSV" base_Association="_6TVgAC37EeeXlbGiPETVvw"/>
   <Chronos:ChiController xmi:id="_nQ6iYLRnEeOfbtYsPp7Oyg" base_Class="_f4Rg4LRnEeOfbtYsPp7Oyg"/>
+  <Chronos:ChiValue xmi:id="_MYb-QErGEeeIG7s1fiut9w" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;config&quot;,&quot;section&quot;:&quot;MarkerColor&quot;,&quot;emptyItem&quot;:&quot;&quot;}}" base_Property="_MYTbYErGEeeIG7s1fiut9w"/>
+  <Chronos:ChiSystem xmi:id="_HPpGMErLEee0XJZnYiatUw" plattform="wcmf" config="backend.ini" base_Class="_HLBr8ErLEee0XJZnYiatUw"/>
+  <Chronos:ChiValue xmi:id="_NOKBIErNEee0XJZnYiatUw" is_editable="true" input_type="select:{&quot;list&quot;:{&quot;type&quot;:&quot;config&quot;,&quot;section&quot;:&quot;MarkerColor&quot;,&quot;emptyItem&quot;:&quot;&quot;}}" base_Property="_NOHk4ErNEee0XJZnYiatUw"/>
 </xmi:XMI>

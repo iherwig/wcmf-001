@@ -19,6 +19,7 @@ use app\src\model\_base\LocationBase;
  * @var address (String)
  * @var website (String)
  * @var notes (String)
+ * @var color (String)
  * @var archived (Integer)
  * @var rating (Integer)
  * @var created (Date)
