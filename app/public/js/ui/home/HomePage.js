@@ -5,6 +5,7 @@ define([
     "dojo/_base/config",
     "dojo/when",
     "dojo/topic",
+    "dojo/dom-style",
     "../_include/_PageMixin",
     "../_include/_NotificationMixin",
     "../_include/widget/NavigationWidget",
@@ -23,6 +24,7 @@ define([
     config,
     when,
     topic,
+    domStyle,
     _Page,
     _Notification,
     NavigationWidget,
@@ -56,6 +58,9 @@ define([
 
             this.own(
                 topic.subscribe("store-error", lang.hitch(this, function(error) {
+                    this.showBackendError(error);
+                })),
+                topic.subscribe("ui/_include/widget/GridWidget/error", lang.hitch(this, function(error) {
                     this.showBackendError(error);
                 }))
             );
@@ -104,6 +109,10 @@ define([
                 actions: this.getGridActions(),
                 enabledFeatures: []
             }, this.gridNode);
+
+            if (config.app.rootTypes.length == 0) {
+                domStyle.set(this.contentNode, "display", "none");
+            }
         },
 
         getGridActions: function() {

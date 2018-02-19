@@ -25,10 +25,10 @@ $messages_en['<em>%0%</em> was successfully updated'] = '';
 $messages_en['action'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_en['Action'] = '';
-// file(s): src/model/wcmf/_base/UserRDBMapper.php
-$messages_en['active'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_en['Active'] = '';
+// file(s): src/model/wcmf/_base/UserRDBMapper.php
+$messages_en['active'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_en['address'] = '';
 // file(s): public/js/ui/admin/template/AdminPage.html, public/js/ui/_include/widget/template/NavigationWidget.html
@@ -57,10 +57,12 @@ $messages_en['Backend error'] = '';
 $messages_en['Cancel'] = '';
 // file(s): lib/io/FileUtil.php
 $messages_en['Cannot copy %0% (it\'s neither a file nor a directory).'] = '';
-// file(s): src/model/_base/LocationRDBMapper.php
-$messages_en['category'] = '';
 // file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_en['Category'] = '';
+// file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php
+$messages_en['category'] = '';
+// file(s): src/model/_base/MarkerRDBMapper.php
+$messages_en['category [Pl.]'] = '';
 // file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_en['Category [Pl.]'] = '';
 // file(s): public/js/action/Link.js
@@ -69,7 +71,7 @@ $messages_en['Choose Objects'] = '';
 $messages_en['code'] = '';
 // file(s): application/controller/SearchIndexController.php
 $messages_en['Collect objects'] = '';
-// file(s): src/model/_base/CategoryRDBMapper.php
+// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/MarkerRDBMapper.php
 $messages_en['color'] = '';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['config'] = '';
@@ -91,11 +93,11 @@ $messages_en['Copying <em>%0%</em>'] = '';
 $messages_en['Copying tree: continue with %0%'] = '';
 // file(s): public/js/locale/Dictionary.js, public/js/ui/data/widget/template/EntityListWidget.html
 $messages_en['Create %0%'] = '';
-// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/wcmf/_base/LockRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/wcmf/_base/LockRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['created'] = '';
 // file(s): public/js/ui/admin/template/AdminPage.html
 $messages_en['Create Search Index'] = '';
-// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['creator'] = '';
 // file(s): application/views/plugins/function.daterange.php
 $messages_en['d.'] = '';
@@ -149,6 +151,8 @@ $messages_en['Finish'] = '';
 $messages_en['Finished'] = '';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['firstname'] = '';
+// file(s): src/model/_base/MarkerRDBMapper.php
+$messages_en['fk_category_id'] = '';
 // file(s): src/model/_base/ImageRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['fk_location_id'] = '';
 // file(s): src/model/wcmf/_base/NMUserRoleRDBMapper.php
@@ -159,7 +163,7 @@ $messages_en['fk_user_id'] = '';
 $messages_en['Home'] = '';
 // file(s): src/model/_base/CategoryRDBMapper.php
 $messages_en['icon'] = '';
-// file(s): src/model/wcmf/_base/DBSequenceRDBMapper.php, src/model/wcmf/_base/LanguageRDBMapper.php, src/model/wcmf/_base/LockRDBMapper.php, src/model/wcmf/_base/PermissionRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php, src/model/wcmf/_base/TranslationRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): src/model/wcmf/_base/DBSequenceRDBMapper.php, src/model/wcmf/_base/LanguageRDBMapper.php, src/model/wcmf/_base/LockRDBMapper.php, src/model/wcmf/_base/PermissionRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php, src/model/wcmf/_base/TranslationRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['id'] = '';
 // file(s): src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_en['Image'] = '';
@@ -187,7 +191,7 @@ $messages_en['Language'] = '';
 $messages_en['Language [Pl.]'] = 'Languages';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
 $messages_en['Last Updates'] = '';
-// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['last_editor'] = '';
 // file(s): public/js/ui/data/EntityListPage.js
 $messages_en['List view class for type <em>%0%</em> not found.'] = '';
@@ -211,23 +215,31 @@ $messages_en['Locks'] = '';
 $messages_en['Lock [Pl.]'] = 'Locks';
 // file(s): application/views/plugins/function.translate.php
 $messages_en['Logged in as %0% since %1%'] = '';
-// file(s): src/model/wcmf/_base/LockRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
-$messages_en['login'] = '';
 // file(s): public/js/ui/login/LoginPage.js
 $messages_en['Login'] = '';
+// file(s): src/model/wcmf/_base/LockRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php
+$messages_en['login'] = '';
 // file(s): public/js/ui/login/LogoutPage.js, public/js/ui/_include/widget/template/NavigationWidget.html
 $messages_en['Logout'] = '';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
 $messages_en['Manage Content'] = '';
+// file(s): src/model/_base/MarkerRDBMapper.php
+$messages_en['Marker'] = '';
+// file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
+$messages_en['marker'] = '';
+// file(s): src/model/_base/CategoryRDBMapper.php
+$messages_en['marker [Pl.]'] = '';
+// file(s): src/model/_base/MarkerRDBMapper.php
+$messages_en['Marker [Pl.]'] = '';
 // file(s): public/js/ui/media/BrowsePage.js
 $messages_en['Media'] = '';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html, public/js/ui/link/template/BrowsePage.html, public/js/ui/media/template/BrowsePage.html, public/js/ui/_include/widget/template/NavigationWidget.html
 $messages_en['Media Pool'] = '';
-// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['modified'] = '';
 // file(s): application/controller/CopyController.php
 $messages_en['Moving'] = '';
-// file(s): src/model/wcmf/_base/LanguageRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
+// file(s): src/model/wcmf/_base/LanguageRDBMapper.php, src/model/wcmf/_base/RoleRDBMapper.php, src/model/wcmf/_base/UserConfigRDBMapper.php, src/model/wcmf/_base/UserRDBMapper.php, src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php
 $messages_en['name'] = '';
 // file(s): public/js/model/meta/Node.js, public/js/ui/data/EntityPage.js
 $messages_en['New <em>%0%</em>'] = '';
@@ -265,8 +277,6 @@ $messages_en['One or more object ids are invalid.'] = '';
 $messages_en['One or more parameters are invalid.'] = '';
 // file(s): lib/presentation/ApplicationError.php
 $messages_en['One or more parameters are missing.'] = '';
-// file(s): lib/model/AbstractQuery.php
-$messages_en['Only PersistenceMappers of type RDBMapper are supported.'] = '';
 // file(s): application/controller/SearchIndexController.php
 $messages_en['Optimizing index'] = '';
 // file(s): public/js/ui/error/NotFoundPage.js
@@ -295,8 +305,6 @@ $messages_en['Processed rows'] = '';
 $messages_en['rating'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Rating'] = '';
-// file(s): src/model/Rating.php
-$messages_en['Ratings may be only updated by their creator'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Rating [Pl.]'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
@@ -432,9 +440,9 @@ $messages_en['The user requires a login name'] = '';
 // file(s): lib/persistence/impl/DefaultPersistentObject.php, lib/presentation/impl/AbstractControllerMessage.php
 $messages_en['The value of \'%0%\' (%1%) is invalid.'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
-$messages_en['Translation'] = '';
-// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['translation'] = '';
+// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
+$messages_en['Translation'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['Translation [Pl.]'] = 'Translations';
 // file(s): public/js/ui/data/widget/EntityFormWidget.js

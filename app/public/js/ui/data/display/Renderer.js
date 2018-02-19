@@ -26,6 +26,7 @@ function(
      */
     Renderer.render = function(value, attribute, options) {
         options = options === undefined ? {} : options;
+        attribute.displayType = attribute.displayType === undefined ? 'text' : attribute.displayType;
         var deferred = new Deferred();
         Renderer.getRenderer(attribute.displayType).then(function(renderer) {
             if (typeof renderer === 'function') {

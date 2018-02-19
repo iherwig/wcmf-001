@@ -75,7 +75,6 @@ function(
 
             this.type = Model.getFullyQualifiedTypeName(this.relation.type);
             this.typeClass = Model.getType(this.type);
-            this.multiplicity = this.relation.maxMultiplicity;
         },
 
         postCreate: function() {
@@ -104,20 +103,18 @@ function(
 
                 this.gridWidget = new GridWidget({
                     type: this.relation.type,
-                    store: RelationStore.getStore(this.entity.get('oid'), this.relation.name),
+                    store: this.getGridStore(),
                     columns: Model.getType(this.type).getAttributes({exclude: ['DATATYPE_IGNORE']}).map(function(attribute) {
                         return attribute.name;
                     }),
                     actions: this.getGridActions(),
-                    enabledFeatures: enabledFeatures
+                    enabledFeatures: enabledFeatures,
+                    autoHeight: true
                 }, this.gridNode);
                 this.gridWidget.startup();
                 domClass.add(this.gridWidget.gridNode, "multiplicity-"+this.relation.maxMultiplicity);
                 domClass.add(this.gridWidget.gridNode, "relation-"+this.relation.thisEndName+"-"+this.relation.name);
-
-                this.createBtn.set("disabled", this.relation.aggregationKind === "none" ||
-                        this.permissions[this.type+'??create'] !== true);
-                this.linkBtn.set("disabled", this.relation.aggregationKind === "composite");
+                this.setDefaultButtonStates();
             }));
 
             this.own(
@@ -133,6 +130,17 @@ function(
                         message: Dict.translate("Finished"),
                         fadeOut: true
                     });
+                })),
+                topic.subscribe('ui/_include/widget/GridWidget/refresh-complete', lang.hitch(this, function(grid) {
+                    if (this.gridWidget && grid == this.gridWidget.grid) {
+                        if (this.gridWidget.grid && this.gridWidget.grid.get('total') >= this.relation.maxMultiplicity) {
+                            this.createBtn.set("disabled", true);
+                            this.linkBtn.set("disabled", true);
+                        }
+                        else {
+                            this.setDefaultButtonStates();
+                        }
+                    }
                 }))
             );
         },
@@ -149,20 +157,20 @@ function(
             if (this.permissions[this.type+'??copy'] === true) {
                 var copyAction = new Copy({
                     targetoid: this.entity.get('oid'),
-                    init: lang.hitch(this, function(data) {
+                    init: lang.hitch(this, function() {
                         this.showNotification({
                             type: "process",
-                            message: Dict.translate("Copying <em>%0%</em>", [this.typeClass.getDisplayValue(data)])
+                            message: Dict.translate("Copying <em>%0%</em>", [this.typeClass.getDisplayValue(copyAction.entity)])
                         });
                     }),
                     callback: lang.hitch(this, function(response) {
                         // success
+                        this.gridWidget.refresh();
                         this.showNotification({
                             type: "ok",
                             message: Dict.translate("<em>%0%</em> was successfully copied", [this.typeClass.getDisplayValue(response)]),
                             fadeOut: true
                         });
-                        this.gridWidget.refresh();
                     }),
                     errback: lang.hitch(this, function(error) {
                         // error
@@ -177,12 +185,12 @@ function(
                     var deleteAction = new Delete({
                         callback: lang.hitch(this, function(response) {
                             // success
+                            this.gridWidget.refresh();
                             this.showNotification({
                                 type: "ok",
                                 message: Dict.translate("<em>%0%</em> was successfully deleted", [this.typeClass.getDisplayValue(response)]),
                                 fadeOut: true
                             });
-                            this.gridWidget.refresh();
                         }),
                         errback: lang.hitch(this, function(error) {
                             // error
@@ -198,12 +206,12 @@ function(
                     relation: this.relation,
                     callback: lang.hitch(this, function(response) {
                         // success
+                        this.gridWidget.refresh();
                         this.showNotification({
                             type: "ok",
                             message: Dict.translate("<em>%0%</em> was successfully unlinked", [this.typeClass.getDisplayValue(response)]),
                             fadeOut: true
                         });
-                        this.gridWidget.refresh();
                     }),
                     errback: lang.hitch(this, function(error) {
                         // error
@@ -219,6 +227,16 @@ function(
             }
 
             return actions;
+        },
+
+        getGridStore: function() {
+            return RelationStore.getStore(this.entity.get('oid'), this.relation.name);
+        },
+        
+        setDefaultButtonStates: function() {
+            this.createBtn.set("disabled", this.relation.aggregationKind === "none" ||
+                this.permissions[this.type+'??create'] !== true);
+            this.linkBtn.set("disabled", this.relation.aggregationKind === "composite");
         },
 
         _create: function(e) {
@@ -245,8 +263,20 @@ function(
                 relation: this.relation,
                 init: lang.hitch(this, function() {
                     this.hideNotification();
+                }),
+                beforeCallback: lang.hitch(this, function(oids) {
+                    this.showNotification({
+                        type: "process",
+                        message: Dict.translate("Linking objects")
+                    });
                 })
             }).execute().then(lang.hitch(this, function(response) {
+                var message = Dict.translate("Objects were successfully linked");
+                this.showNotification({
+                    type: "ok",
+                    message: message,
+                    fadeOut: true
+                });
                 // success
                 this.gridWidget.refresh();
             }), lang.hitch(this, function(error) {

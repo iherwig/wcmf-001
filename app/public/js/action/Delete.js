@@ -26,6 +26,7 @@ define([
 
         // action parameters
         entity: null,
+        beforeCallback: null, /* Optional function, that will be called before actual execution */
 
         execute: function() {
             var deferred = new Deferred();
@@ -38,11 +39,15 @@ define([
                     var store = Store.getStore(typeName, config.app.defaultLanguage);
                     var storeDeferred = store.remove(store.getIdentity(this.entity)).then(lang.hitch(this, function(results) {
                         // success
+                        this.entity.setState("deleted");
                         deferred.resolve(this.entity);
                     }), lang.hitch(this, function(error) {
                         // error
                         deferred.reject(error);
                     }));
+                    if (this.beforeCallback) {
+                        this.beforeCallback();
+                    }
                     return storeDeferred;
                 })
             }).show();

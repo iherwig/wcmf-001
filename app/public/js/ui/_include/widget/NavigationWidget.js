@@ -106,6 +106,11 @@ define([
                 }
             }));
 
+            // hide content menu, if no root types
+            if (config.app.rootTypes.length == 0) {
+                query("#navContent").style("display", "none");
+            }
+
             // set selected menu
             query(".main-menu").removeClass("active");
             if (this.selected) {

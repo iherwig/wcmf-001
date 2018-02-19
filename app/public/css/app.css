@@ -121,6 +121,10 @@ label {
   display: block;
 }
 
+.dijitTextBoxDisabled input {
+  color: #555 !important;
+}
+
 .entity-page .attribute_group {
   padding: 8px;
   margin: 2px;
@@ -130,18 +134,9 @@ label {
 }
 
 .entity-page .group_default {
-  background: #f1f1f1;
 }
 
 /* dgrid */
-.relation-container .dgrid {
-  height: 500px !important;
-}
-
-.relation-container .dgrid.multiplicity-1 {
-  height: 55px !important;
-}
-
 .dgrid-row:hover, .dgrid-row:hover .dgrid-cell {
   background-color: #08c;
 }

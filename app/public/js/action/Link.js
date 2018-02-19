@@ -33,6 +33,7 @@ define([
         // action parameters
         source: null, /* Entity */
         relation: null,
+        beforeCallback: null, /* Optional function, that will be called before actual execution */
 
         execute: function() {
             var relationType = this.relation.type;
@@ -49,7 +50,6 @@ define([
                 okCallback: lang.hitch(this, function(dlg) {
                     var entityStore = Store.getStore(relationType, config.app.defaultLanguage);
                     var relStore = RelationStore.getStore(oid, relationName);
-
                     var oids = dlg.getSelectedOids();
                     var loadPromises = [];
                     for (var i=0, count=oids.length; i<count; i++) {
@@ -63,13 +63,16 @@ define([
                             deferredList.push(relStore.put(entity, {overwrite: true}));
                         }
                         all(deferredList).then(lang.hitch(this, function(results) {
-                            // callback completes
+                            // success
                             deferred.resolve(results);
                         }), lang.hitch(this, function(error) {
                             // error
                             deferred.reject(error);
                         }));
                     }));
+                    if (this.beforeCallback) {
+                        this.beforeCallback(oids);
+                    }
                     return all(loadPromises);
                 })
             }).show();

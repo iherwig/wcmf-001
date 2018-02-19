@@ -5,6 +5,7 @@ define([
     "dojo/_base/config",
     "dojo/when",
     "dojo/topic",
+    "dojo/dom-construct",
     "../../ui/_include/_PageMixin",
     "../../ui/_include/_NotificationMixin",
     "../../ui/_include/widget/NavigationWidget",
@@ -12,6 +13,7 @@ define([
     "../../ui/data/display/Renderer",
     "../../ui/data/input/widget/TextBox",
     "../../ui/data/input/widget/SelectBox",
+    "../../ui/data/input/widget/CheckBox",
     "../../model/meta/Model",
     "../../persistence/Store",
     "../../persistence/HistoryStore",
@@ -28,6 +30,7 @@ define([
     config,
     when,
     topic,
+    domConstruct,
     _Page,
     _Notification,
     NavigationWidget,
@@ -35,6 +38,7 @@ define([
     Renderer,
     TextBox,
     Select,
+    CheckBox,
     Model,
     Store,
     HistoryStore,
@@ -54,7 +58,10 @@ define([
         markers: [],
         category: null,
         categories: {},
+        categoryMarkers: {},
+        selectedCategoryMarkers: [],
         query: null,
+        lastCallTS: null,
 
         constructor: function(params) {
             // register search result type if not done already
@@ -122,7 +129,7 @@ define([
                     this.loadMarkers(this.categories[id]);
                 }));
 
-                // set location markers
+                // load categories and set default category
                 var categoryStore = Store.getStore('Category', config.app.defaultLanguage);
                 categoryStore.setExtraParam('values', 'id,name,icon,color');
                 categoryStore.fetch().then(lang.hitch(this, function(items) {
@@ -185,64 +192,104 @@ define([
         loadMarkers: function(category, query) {
             var id = parseInt(category.id);
             if (this.category === null || id !== this.category.id || query !== this.query) {
+                this.category = category;
+                this.query = query;
+                this.lastCallTS = Date.now();
+
                 // clear map
                 for (var i=0, count=this.markers.length; i<count; i++) {
                     this.map.removeLayer(this.markers[i]);
                 }
                 this.mapErrorNode.innerHTML = "";
 
-                // load markers
-                this.category = category;
-                var geocoder = new L.Control.Geocoder.Nominatim();
-                this.markers = [];
-                var type = 'Location';
-                var store = Store.getStore(type, config.app.defaultLanguage);
-                store.setExtraParam('values', 'id,name,address,website,user,rating,color');
-                var filter = new store.Filter().eq(type+'.category', category.id).or(
-                          new store.Filter().ne(type+'.archived', 1),
-                          new store.Filter().eq(type+'.archived', null)
-                );
-                if (query) {
-                    filter = filter.and(
-                        new store.Filter().match(type+'.name', new RegExp('.*'+query+'.*', 'i'))
-                    );
-                }
-                store.filter(filter).fetch().then(lang.hitch(this, function(locations) {
-                    this.statusNode.innerHTML = Dict.translate("%0% item(s)", ["0/"+locations.length]);
-                    for (var i=0, count=locations.length; i<count; i++) {
-                        var location = locations[i];
-                        var coords = Page.coordinates[location.id];
-                        if (coords) {
-                            this.setMarker(category, location, coords.lat, coords.lng);
-                            this.statusNode.innerHTML = Dict.translate("%0% item(s)", [this.markers.length+"/"+locations.length]);
-                        }
-                        else {
-                            geocoder.geocode(location.address, lang.hitch(this, lang.partial(function(location, results) {
-                                if (results.length > 0) {
-                                    var coords = {
-                                        lat: results[0].center.lat,
-                                        lng: results[0].center.lng
-                                    };
-                                    this.setMarker(category, location, coords.lat, coords.lng);
-                                    this.statusNode.innerHTML = Dict.translate("%0% item(s)", [this.markers.length+"/"+locations.length]);
-                                    Page.coordinates[location.id] = coords;
-                                }
-                                else {
-                                    this.mapErrorNode.innerHTML +=
-                                            Dict.translate("Error")+': <a href="'+this.getLocationUrl(location.id)+'">'+location.address+'</a><br>';
-                                }
-                            }), location));
-                        }
+                // load category markers
+                this.categoryMarkers = {};
+                this.categoryMarkersNode.innerHTML = "";
+                var markerStore = Store.getStore('Marker', config.app.defaultLanguage);
+                markerStore.setExtraParam('values', 'id,name,color');
+                var markerFilter = new markerStore.Filter().eq('Marker.fk_category_id', category.id);
+                markerStore.filter(markerFilter).fetch().then(lang.hitch(this, function(items) {
+                    var itemMap = {};
+                    for (var i=0, count=items.length; i<count; i++) {
+                        var item = items[i];
+                        this.categoryMarkers[item.id] = item;
+                        itemMap[item.id] = item.name;
                     }
+                    var markerCategoryControl = new CheckBox({
+                        name: 'markerCategories',
+                        inputType: 'checkbox:{"list":{"type":"fix","items":'+JSON.stringify(itemMap)+'}}'
+                    }, this.categoryMarkersNode);
+                    markerCategoryControl.startup();
+                    markerCategoryControl.on('change', lang.hitch(this, function(value) {
+                        this.selectedCategoryMarkers = value.split(',').filter(function(val) {
+                            return val !== '';
+                        });
+                        this.loadMarkers(this.category, this.query);
+                    }));
+
+                    // load location markers
+                    var geocoder = new L.Control.Geocoder.Nominatim();
+                    this.markers = [];
+                    var locationStore = Store.getStore('Location', config.app.defaultLanguage);
+                    locationStore.setExtraParam('values', 'id,name,address,website,user,rating,marker');
+                    var locationFilter = new locationStore.Filter().eq('Location.category', category.id).or(
+                              new locationStore.Filter().ne('Location.archived', 1),
+                              new locationStore.Filter().eq('Location.archived', null)
+                    );
+                    if (query) {
+                        locationFilter = locationFilter.and(
+                            new locationStore.Filter().match('Location.name', new RegExp('.*'+query+'.*', 'i'))
+                        );
+                    }
+                    if (this.selectedCategoryMarkers.length > 0) {
+                        locationFilter = locationFilter.and(
+                            new locationStore.Filter()['in']('Location.marker', this.selectedCategoryMarkers.join(',')),
+                            new locationStore.Filter().ne('Location.marker', null)
+                        );
+                    }
+                    var localCallTS = this.lastCallTS;
+                    locationStore.filter(locationFilter).fetch().then(lang.hitch(this, function(locations) {
+                        this.statusNode.innerHTML = Dict.translate("%0% item(s)", ["0/"+locations.length]);
+                        for (var i=0, count=locations.length; i<count; i++) {
+                            var location = locations[i];
+                            var coords = Page.coordinates[location.id];
+                            if (coords) {
+                                this.setMarker(category, location, coords.lat, coords.lng, localCallTS);
+                                this.statusNode.innerHTML = Dict.translate("%0% item(s)", [this.markers.length+"/"+locations.length]);
+                            }
+                            else {
+                                geocoder.geocode(location.address, lang.hitch(this, lang.partial(function(location, results) {
+                                    if (results.length > 0) {
+                                        var coords = {
+                                            lat: results[0].center.lat,
+                                            lng: results[0].center.lng
+                                        };
+                                        this.setMarker(category, location, coords.lat, coords.lng, localCallTS);
+                                        this.statusNode.innerHTML = Dict.translate("%0% item(s)", [this.markers.length+"/"+locations.length]);
+                                        Page.coordinates[location.id] = coords;
+                                    }
+                                    else {
+                                        this.mapErrorNode.innerHTML +=
+                                                Dict.translate("Error")+': <a href="'+this.getLocationUrl(location.id)+'">'+location.address+'</a><br>';
+                                    }
+                                }), location));
+                            }
+                        }
+                    }));
                 }));
             }
         },
 
-        setMarker: function(category, location, lat, lng) {
+        setMarker: function(category, location, lat, lng, ts) {
+            if (ts < this.lastCallTS) {
+                // skip markers from former call
+                return;
+            }
             var icon = L.AwesomeMarkers.icon({
                 prefix: 'fa',
                 icon: category.icon,
-                markerColor: location.color ? location.color : category.color ? category.color : 'white'
+                markerColor: location.marker && this.categoryMarkers[location.marker] ? this.categoryMarkers[location.marker].color : 
+                    (category.color ? category.color : 'white')
             });
             var ratingStr = '';
             var rating = location.rating;
