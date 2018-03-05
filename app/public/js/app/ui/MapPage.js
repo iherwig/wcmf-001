@@ -231,7 +231,7 @@ define([
                     var geocoder = new L.Control.Geocoder.Nominatim();
                     this.markers = [];
                     var locationStore = Store.getStore('Location', config.app.defaultLanguage);
-                    locationStore.setExtraParam('values', 'id,name,address,website,user,rating,marker');
+                    locationStore.setExtraParam('values', 'id,name,address,website,user,rating,marker,lat,lng');
                     var locationFilter = new locationStore.Filter().eq('Location.category', category.id).or(
                               new locationStore.Filter().ne('Location.archived', 1),
                               new locationStore.Filter().eq('Location.archived', null)
@@ -252,27 +252,17 @@ define([
                         this.statusNode.innerHTML = Dict.translate("%0% item(s)", ["0/"+locations.length]);
                         for (var i=0, count=locations.length; i<count; i++) {
                             var location = locations[i];
-                            var coords = Page.coordinates[location.id];
+                            var coords = location.lat && location.lng ? {
+                                lat: location.lat,
+                                lng: location.lng
+                            } : null;
                             if (coords) {
                                 this.setMarker(category, location, coords.lat, coords.lng, localCallTS);
                                 this.statusNode.innerHTML = Dict.translate("%0% item(s)", [this.markers.length+"/"+locations.length]);
                             }
                             else {
-                                geocoder.geocode(location.address, lang.hitch(this, lang.partial(function(location, results) {
-                                    if (results.length > 0) {
-                                        var coords = {
-                                            lat: results[0].center.lat,
-                                            lng: results[0].center.lng
-                                        };
-                                        this.setMarker(category, location, coords.lat, coords.lng, localCallTS);
-                                        this.statusNode.innerHTML = Dict.translate("%0% item(s)", [this.markers.length+"/"+locations.length]);
-                                        Page.coordinates[location.id] = coords;
-                                    }
-                                    else {
-                                        this.mapErrorNode.innerHTML +=
-                                                Dict.translate("Error")+': <a href="'+this.getLocationUrl(location.id)+'">'+location.address+'</a><br>';
-                                    }
-                                }), location));
+                                this.mapErrorNode.innerHTML +=
+                                        Dict.translate("Error")+': <a href="'+this.getLocationUrl(location.id)+'">'+location.address+'</a><br>';
                             }
                         }
                     }));
@@ -352,9 +342,5 @@ define([
             window.open(url, '_blank', 'width=800,height=700');
         }
     });
-
-    // Cache for resolved location coordinates
-    Page.coordinates = {};
-
     return Page;
 });

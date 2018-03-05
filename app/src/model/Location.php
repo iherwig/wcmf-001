@@ -63,6 +63,16 @@ class Location extends LocationBase {
     }
   }
 
+  /**
+   * @see PersistentObject::beforeUpdate()
+   */
+  public function beforeUpdate() {
+    if (in_array('address', $this->getChangedValues())) {
+      $this->updateCoords();
+    }
+    parent::beforeUpdate();
+  }
+
   private function updateCoords() {
     $config = [
         'timeout' => 2.0,
@@ -71,10 +81,13 @@ class Location extends LocationBase {
     $guzzle = new GuzzleClient($config);
     $adapter  = new Client($guzzle);
     $geocoder = Nominatim::withOpenStreetMapServer($adapter);
-    $results = $geocoder->geocodeQuery(GeocodeQuery::create($this->getValue('address')));
-    $this->setValue('lat', $results->first()->getCoordinates()->getLatitude());
-    $this->setValue('lng', $results->first()->getCoordinates()->getLongitude());
-    $this->getMapper()->save($this);
+    try {
+      $results = $geocoder->geocodeQuery(GeocodeQuery::create($this->getValue('address')));
+      $this->setValue('lat', $results->first()->getCoordinates()->getLatitude());
+      $this->setValue('lng', $results->first()->getCoordinates()->getLongitude());
+      $this->getMapper()->save($this);
+    }
+    catch (\Exception $ex) {}
   }
 // PROTECTED REGION END
   /**
