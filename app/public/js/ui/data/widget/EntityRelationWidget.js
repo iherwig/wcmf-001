@@ -15,6 +15,8 @@ define( [
     "../../../action/CheckPermissions",
     "../../../model/meta/Model",
     "../../../persistence/RelationStore",
+    "../../../action/ImportCSV",
+    "../../../action/ExportCSV",
     "../../../action/Edit",
     "../../../action/Copy",
     "../../../action/Link",
@@ -42,6 +44,8 @@ function(
     CheckPermissions,
     Model,
     RelationStore,
+    ImportCSV,
+    ExportCSV,
     Edit,
     Copy,
     Link,
@@ -237,6 +241,48 @@ function(
             this.createBtn.set("disabled", this.relation.aggregationKind === "none" ||
                 this.permissions[this.type+'??create'] !== true);
             this.linkBtn.set("disabled", this.relation.aggregationKind === "composite");
+        },
+
+        _import: function(e) {
+            // prevent the page from navigating after submit
+            e.preventDefault();
+  
+            new CreateInRelation({
+                page: this.page,
+                route: this.route,
+                source: this.entity,
+                relation: this.relation,
+                init: lang.hitch(this, function() {
+                    this.hideNotification();
+                })
+            }).execute();
+        },
+  
+        _export: function(e) {
+            // prevent the page from navigating after submit
+            e.preventDefault();
+    
+            // get filter query
+            var gridFilter = null;
+            var query = gridFilter ? this.getGridStore()._renderFilterParams(gridFilter)[0] : null;
+    
+            this.exportBtn.setProcessing();
+            new ExportCSV({
+                type: this.type,
+                query: query
+            }).execute().then(
+                lang.hitch(this, function() {
+                    this.exportBtn.reset();
+                }),
+                lang.hitch(this, function(error) {
+                    this.showBackendError(error);
+                    this.exportBtn.reset();
+                }),
+                lang.hitch(this, function(status) {
+                    var progress = status.stepNumber/status.numberOfSteps;
+                    this.exportBtn.setProgress(progress);
+                })
+            );
         },
 
         _create: function(e) {

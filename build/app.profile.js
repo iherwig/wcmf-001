@@ -58,6 +58,7 @@ var appSrc = [
     "app/js/ui/_include/_HelpMixin",
     "app/js/ui/_include/_NotificationMixin",
     "app/js/ui/_include/_PageMixin",
+    "app/js/ui/_include/_TranslateMixin",
     "app/js/ui/_include/widget/Button",
     "app/js/ui/_include/widget/ConfirmDlgWidget",
     "app/js/ui/_include/widget/GridWidget",
@@ -208,7 +209,7 @@ var profile = {
       },
       { name: 'jquery', location: 'vendor/jquery', destLocation: 'vendor/jquery', main: 'jquery.min' },
       { name: 'jquery-ui', location: 'vendor/jquery-ui', destLocation: 'vendor/jquery-ui', main: 'jquery-ui.min' },
-      { name: 'elfinder', location: 'vendor/studio-42/elfinder-js', destLocation: 'vendor/studio-42/elfinder-js' },
+      { name: 'elfinder', location: 'vendor/studio-42/elfinder-js', destLocation: 'vendor/studio-42/elfinder-js', main: 'js/elfinder.full' },
 
       { name: 'app', location: '.', destLocation: '.',
           trees: [

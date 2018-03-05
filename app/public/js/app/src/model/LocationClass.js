@@ -129,6 +129,32 @@ define([
             isReference: false,
             isTransient: false
         }, {
+            name: "lat",
+            type: "String",
+            description: "",
+            isEditable: true,
+            inputType: "text",
+            displayType: "text",
+            validateType: "",
+            validateDesc: "",
+            tags: ["DATATYPE_ATTRIBUTE"],
+            defaultValue: null,
+            isReference: false,
+            isTransient: false
+        }, {
+            name: "lng",
+            type: "String",
+            description: "",
+            isEditable: true,
+            inputType: "text",
+            displayType: "text",
+            validateType: "",
+            validateDesc: "",
+            tags: ["DATATYPE_ATTRIBUTE"],
+            defaultValue: null,
+            isReference: false,
+            isTransient: false
+        }, {
             name: "archived",
             type: "Integer",
             description: "",

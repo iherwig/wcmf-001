@@ -57,6 +57,8 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       elseif ($name == 'website') { $displayName = $message->getText("website"); }
       elseif ($name == 'notes') { $displayName = $message->getText("notes"); }
       elseif ($name == 'marker') { $displayName = $message->getText("marker"); }
+      elseif ($name == 'lat') { $displayName = $message->getText("lat"); }
+      elseif ($name == 'lng') { $displayName = $message->getText("lng"); }
       elseif ($name == 'archived') { $displayName = $message->getText("archived"); }
       elseif ($name == 'rating') { $displayName = $message->getText("rating"); }
       elseif ($name == 'created') { $displayName = $message->getText("created"); }
@@ -80,6 +82,8 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       elseif ($name == 'website') { $description = $message->getText(""); }
       elseif ($name == 'notes') { $description = $message->getText(""); }
       elseif ($name == 'marker') { $description = $message->getText(""); }
+      elseif ($name == 'lat') { $description = $message->getText(""); }
+      elseif ($name == 'lng') { $description = $message->getText(""); }
       elseif ($name == 'archived') { $description = $message->getText(""); }
       elseif ($name == 'rating') { $description = $message->getText(""); }
       elseif ($name == 'created') { $description = $message->getText(""); }
@@ -175,6 +179,14 @@ class LocationRDBMapper extends NodeUnifiedRDBMapper {
       *
       */
       'marker' => new RDBAttributeDescription('marker', 'Integer', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'select:{"list":{"type":"node","types":["Marker"],"emptyItem":""}}', 'text', 'Location', 'marker'),
+     /**
+      *
+      */
+      'lat' => new RDBAttributeDescription('lat', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'text', 'text', 'Location', 'lat'),
+     /**
+      *
+      */
+      'lng' => new RDBAttributeDescription('lng', 'String', ['DATATYPE_ATTRIBUTE'], null, '', '', true, 'text', 'text', 'Location', 'lng'),
      /**
       *
       */

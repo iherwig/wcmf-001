@@ -1,7 +1,7 @@
 <?php
 $messages_en = [];
 $messages_en[''] = '';
-// file(s): public/js/app/ui/MapPage.js, public/js/ui/data/widget/EntityListWidget.js, public/js/ui/search/SearchResultPage.js
+// file(s): public/js/app/ui/MapPage.js, public/js/ui/_include/widget/GridWidget.js
 $messages_en['%0% item(s)'] = '';
 // file(s): public/js/ui/data/input/widget/MultiSelectBox.js
 $messages_en['%0% selected'] = '';
@@ -25,10 +25,10 @@ $messages_en['<em>%0%</em> was successfully updated'] = '';
 $messages_en['action'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
 $messages_en['Action'] = '';
-// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
-$messages_en['Active'] = '';
 // file(s): src/model/wcmf/_base/UserRDBMapper.php
 $messages_en['active'] = '';
+// file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html
+$messages_en['Active'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php
 $messages_en['address'] = '';
 // file(s): public/js/ui/admin/template/AdminPage.html, public/js/ui/_include/widget/template/NavigationWidget.html
@@ -61,10 +61,12 @@ $messages_en['Cannot copy %0% (it\'s neither a file nor a directory).'] = '';
 $messages_en['Category'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php
 $messages_en['category'] = '';
-// file(s): src/model/_base/MarkerRDBMapper.php
-$messages_en['category [Pl.]'] = '';
 // file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_en['Category [Pl.]'] = '';
+// file(s): src/model/_base/MarkerRDBMapper.php
+$messages_en['category [Pl.]'] = '';
+// file(s): src/model/_base/MarkerRDBMapper.php
+$messages_en['category_name'] = '';
 // file(s): public/js/action/Link.js
 $messages_en['Choose Objects'] = '';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
@@ -183,18 +185,24 @@ $messages_en['Initialization'] = '';
 $messages_en['Inserted objects'] = '';
 // file(s): src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['Instances of this class are used to localize entity attributes. Each instance defines a translation of one attribute of one entity into one language.'] = '';
-// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
-$messages_en['language'] = '';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_en['Language'] = '';
+// file(s): src/model/wcmf/_base/TranslationRDBMapper.php
+$messages_en['language'] = '';
 // file(s): src/model/wcmf/_base/LanguageRDBMapper.php
 $messages_en['Language [Pl.]'] = 'Languages';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
 $messages_en['Last Updates'] = '';
 // file(s): public/js/app/ui/MapPage.js, public/js/ui/home/HomePage.js, src/model/_base/CategoryRDBMapper.php, src/model/_base/ImageRDBMapper.php, src/model/_base/LocationRDBMapper.php, src/model/_base/MarkerRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['last_editor'] = '';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_en['lat'] = '';
+// file(s): public/js/ui/data/widget/EntityRelationWidget.js
+$messages_en['Linking objects'] = '';
 // file(s): public/js/ui/data/EntityListPage.js
 $messages_en['List view class for type <em>%0%</em> not found.'] = '';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_en['lng'] = '';
 // file(s): application/controller/BatchDisplayController.php, public/js/ui/_include/widget/GridWidget.js
 $messages_en['Loading'] = '';
 // file(s): application/controller/BatchDisplayController.php
@@ -223,14 +231,14 @@ $messages_en['login'] = '';
 $messages_en['Logout'] = '';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html
 $messages_en['Manage Content'] = '';
-// file(s): src/model/_base/MarkerRDBMapper.php
-$messages_en['Marker'] = '';
 // file(s): src/model/_base/CategoryRDBMapper.php, src/model/_base/LocationRDBMapper.php
 $messages_en['marker'] = '';
-// file(s): src/model/_base/CategoryRDBMapper.php
-$messages_en['marker [Pl.]'] = '';
+// file(s): src/model/_base/MarkerRDBMapper.php
+$messages_en['Marker'] = '';
 // file(s): src/model/_base/MarkerRDBMapper.php
 $messages_en['Marker [Pl.]'] = '';
+// file(s): src/model/_base/CategoryRDBMapper.php
+$messages_en['marker [Pl.]'] = '';
 // file(s): public/js/ui/media/BrowsePage.js
 $messages_en['Media'] = '';
 // file(s): public/js/app/ui/template/MapPage.html, public/js/ui/home/template/HomePage.html, public/js/ui/link/template/BrowsePage.html, public/js/ui/media/template/BrowsePage.html, public/js/ui/_include/widget/template/NavigationWidget.html
@@ -263,8 +271,12 @@ $messages_en['No route matching the request path can be found.'] = '';
 $messages_en['notes'] = '';
 // file(s): lib/persistence/impl/NullMapper.php
 $messages_en['NULLType'] = '';
+// file(s): public/js/model/meta/Node.js
+$messages_en['Object'] = '';
 // file(s): src/model/wcmf/_base/LockRDBMapper.php, src/model/wcmf/_base/TranslationRDBMapper.php
 $messages_en['objectid'] = '';
+// file(s): public/js/ui/data/widget/EntityRelationWidget.js
+$messages_en['Objects were successfully linked'] = '';
 // file(s): public/js/ui/_include/widget/PopupDlgWidget.js
 $messages_en['OK'] = '';
 // file(s): public/js/ui/settings/template/SettingsPage.html
@@ -301,10 +313,10 @@ $messages_en['Permission [Pl.]'] = 'Permissions';
 $messages_en['Possible file upload attack: filename %0%.'] = '';
 // file(s): public/js/ui/data/widget/EntityListWidget.js
 $messages_en['Processed rows'] = '';
-// file(s): src/model/_base/LocationRDBMapper.php
-$messages_en['rating'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Rating'] = '';
+// file(s): src/model/_base/LocationRDBMapper.php
+$messages_en['rating'] = '';
 // file(s): src/model/_base/LocationRDBMapper.php, src/model/_base/RatingRDBMapper.php
 $messages_en['Rating [Pl.]'] = '';
 // file(s): public/js/ui/data/widget/template/PermissionDlgWidget.html

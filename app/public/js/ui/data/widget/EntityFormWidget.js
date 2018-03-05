@@ -189,6 +189,7 @@ function(
                                 name: attribute.name,
                                 'class': attribute.tags ? attribute.tags.join(' ').toLowerCase() : '',
                                 value: this.entity[attribute.name],
+                                defaultLanguageValue: !disabled && this.isTranslation ? this.original[attribute.name] : null,
                                 disabled: disabled,
                                 helpText: Dict.translate(attribute.description),
                                 inputType: attribute.inputType,
@@ -254,6 +255,12 @@ function(
 
                 if (!this.isNew) {
                     this.buildLanguageMenu();
+                    if (!this.isTranslation) {
+                        query(this.translateNode).style("display", "none");
+                    }
+                }
+                else {
+                    query(this.translateNode).style("display", "none");
                 }
 
                 // notify listeners
@@ -665,6 +672,18 @@ function(
                     this.showBackendError(error);
                 })
             );
+        },
+
+        _translate: function(e) {
+            // prevent the page from navigating after submit
+            e.preventDefault();
+
+            for (var i=0, c=this.attributeWidgets.length; i<c; i++) {
+                var widget = this.attributeWidgets[i];
+                if (!widget.get("disabled") && !widget.get("value")) {
+                    widget.set("value", widget.get("defaultLanguageValue"));
+                }
+            }
         },
 
         _permissions: function(e) {

@@ -15,6 +15,7 @@ define( [
     "../Factory",
     "../../../../locale/Dictionary",
     "../../../_include/_HelpMixin",
+    "../../../_include/_TranslateMixin",
     "../../../_include/widget/MediaBrowserDlgWidget",
     "./_AttributeWidgetMixin",
     "dojo/text!./template/CKEditor.html"
@@ -31,11 +32,12 @@ function(
     ControlFactory,
     Dict,
     _HelpMixin,
+    _TranslateMixin,
     MediaBrowserDlg,
     _AttributeWidgetMixin,
     template
 ) {
-    return declare([TextBox, _HelpMixin, _AttributeWidgetMixin], {
+    return declare([TextBox, _HelpMixin, _TranslateMixin, _AttributeWidgetMixin], {
 
         templateString: template,
         intermediateChanges: true,
@@ -48,12 +50,6 @@ function(
             declare.safeMixin(this, args);
 
             this.label = Dict.translate(this.name);
-        },
-
-        create: function(){
-          this.inherited(arguments);
-          // only send change events, when content changes
-          this._onChangeActive = false;
         },
 
         postCreate: function() {
@@ -109,16 +105,19 @@ function(
                             data.name === this.name) {
                         var newValue = this.sanitiseValue(data.newValue);
                         this.set("value", newValue);
-                        this.editorInstance.setData(newValue);
                     }
                 }))
             );
             this.editorInstance.on("instanceReady", lang.hitch(this, function() {
-                this.editorInstance.on("change", lang.hitch(this, this.editorValueChanged));
+                this.editorInstance.on("change", lang.hitch(this, function() {
+                    this.set("value", this.sanitiseValue(this.editorInstance.getData()));
+                    // send change event
+                    this.emit("change", this);
+                }));
                 // set padding on editor content
                 var content = query("iframe", this.domNode)[0].contentWindow.document;
                 win.withDoc(content, function() {
-                  query(".cke_editable").style("padding", "5px");
+                    query(".cke_editable").style("padding", "5px");
                 }, this);
                 // fix edit state (editor instance is initially read only)
                 this.set("disabled", this.disabled);
@@ -131,14 +130,20 @@ function(
             }
         },
 
-        editorValueChanged: function() {
-            setTimeout(lang.hitch(this, function() {
-                this._onChangeActive = true;
-                this.set("value", this.sanitiseValue(this.editorInstance.getData()));
-                // send change event
-                this.emit("change", this);
-                this._onChangeActive = false;
-            }, 0));
+        _setValueAttr: function(value) {
+            if (this.editorInstance && value != this.sanitiseValue(this.editorInstance.getData())) {
+                this.editorInstance.setData(value);
+            }
+            this.inherited(arguments);
+        },
+
+        _getValueAttr: function() {
+            if (this.editorInstance) {
+                return this.sanitiseValue(this.editorInstance.getData());
+            }
+            else {
+                return this.inherited(arguments);
+            }
         },
 
         getToolbarName: function() {

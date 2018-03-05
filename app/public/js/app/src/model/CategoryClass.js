@@ -69,7 +69,7 @@ define([
             description: "",
             isEditable: true,
             inputType: "select:{\"list\":{\"type\":\"config\",\"section\":\"MarkerColor\",\"emptyItem\":\"\"}}",
-            displayType: "text",
+            displayType: "color",
             validateType: "",
             validateDesc: "",
             tags: ["DATATYPE_ATTRIBUTE"],

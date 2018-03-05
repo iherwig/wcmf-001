@@ -7,6 +7,10 @@ namespace app\src\model;
 
 use app\src\model\_base\LocationBase;
 // PROTECTED REGION ID(app/src/model/Location.php/Import) ENABLED START
+use GuzzleHttp\Client as GuzzleClient;
+use Http\Adapter\Guzzle6\Client;
+use Geocoder\Provider\Nominatim\Nominatim;
+use Geocoder\Query\GeocodeQuery;
 // PROTECTED REGION END
 
 /**
@@ -20,6 +24,8 @@ use app\src\model\_base\LocationBase;
  * @var website (String)
  * @var notes (String)
  * @var marker (Integer)
+ * @var lat (String)
+ * @var lng (String)
  * @var archived (Integer)
  * @var rating (Integer)
  * @var created (Date)
@@ -50,6 +56,25 @@ class Location extends LocationBase {
       }
       $this->rating = $ratingSum / $numRatings;
     }
+
+    if (strlen($this->getValue('address')) > 0 &&
+        (strlen($this->getValue('lat')) == 0 || strlen($this->getValue('lng')) == 0)) {
+          $this->updateCoords();
+    }
+  }
+
+  private function updateCoords() {
+    $config = [
+        'timeout' => 2.0,
+        'verify' => false,
+    ];
+    $guzzle = new GuzzleClient($config);
+    $adapter  = new Client($guzzle);
+    $geocoder = Nominatim::withOpenStreetMapServer($adapter);
+    $results = $geocoder->geocodeQuery(GeocodeQuery::create($this->getValue('address')));
+    $this->setValue('lat', $results->first()->getCoordinates()->getLatitude());
+    $this->setValue('lng', $results->first()->getCoordinates()->getLongitude());
+    $this->getMapper()->save($this);
   }
 // PROTECTED REGION END
   /**
